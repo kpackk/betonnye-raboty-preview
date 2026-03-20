@@ -208,8 +208,6 @@ function betonnye_yandex_metrika() {
  */
 add_action( 'wp_head', 'betonnye_favicon', 2 );
 function betonnye_favicon() {
-	if ( ! has_site_icon() ) {
-		echo '<link rel="icon" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon.ico' ) . '" type="image/x-icon">' . "\n";
-		echo '<link rel="shortcut icon" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon.ico' ) . '" type="image/x-icon">' . "\n";
-	}
+	echo '<link rel="icon" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon.ico' ) . '" type="image/x-icon">' . "\n";
+	echo '<link rel="shortcut icon" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon.ico' ) . '" type="image/x-icon">' . "\n";
 }
