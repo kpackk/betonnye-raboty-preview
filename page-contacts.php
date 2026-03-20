@@ -58,7 +58,6 @@ get_header();
                     <div class="contact-item">
                         <h3>Мессенджеры</h3>
                         <div class="contacts-messengers">
-                            <a href="https://wa.me/+79592591159" target="_blank" rel="noopener">WhatsApp</a>
                             <a href="https://t.me/+79592591159" target="_blank" rel="noopener">Telegram</a>
                         </div>
                     </div>

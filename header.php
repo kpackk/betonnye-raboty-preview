@@ -19,19 +19,20 @@ defined( 'ABSPATH' ) || exit;
 <header class="site-header">
 	<div class="header-inner container">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo">
-			<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="180" height="40">
+			<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/logo.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" style="height: 76px; width: auto;">
 		</a>
 
 		<div class="header-tagline">
-			<span>Профессиональные в Луганске и ЛНР</span>
+			<span>Профессиональные</span>
 			<strong>бетонные и монолитные работы</strong>
+			<span>в Луганске и ЛНР</span>
 		</div>
 
 		<div class="header-address">
-			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-				<path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" fill="currentColor"/>
+			<svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" fill="#E74C3C"/>
 			</svg>
-			<span>г. Луганск, ул. Фрунзе 42</span>
+			<span>г. Луганск,<br>ул. Фрунзе 42</span>
 		</div>
 
 		<a href="#" class="header-btn btn-price" data-modal="modal-price">
@@ -43,11 +44,8 @@ defined( 'ABSPATH' ) || exit;
 		</a>
 
 		<div class="header-online">
-			<span>Мы онлайн, <em>пишите</em></span>
+			<span><span style="color:#4CAF50; font-size:10px; margin-right:4px;">&#9679;</span>Мы онлайн, <em>пишите</em></span>
 			<div class="header-online__links">
-				<a href="https://wa.me/+79592591159" class="header-online__link header-online__link--wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/whatsapp.svg' ); ?>" alt="WhatsApp" width="32" height="32" loading="lazy">
-				</a>
 				<a href="https://t.me/+79592591159" class="header-online__link header-online__link--tg" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
 					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/telegram.svg' ); ?>" alt="Telegram" width="32" height="32" loading="lazy">
 				</a>

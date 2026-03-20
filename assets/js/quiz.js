@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
         steps.forEach((step, i) => {
             step.classList.toggle('active', i === index);
         });
-        // Update progress bar (0%, 33%, 66%, 100%)
-        const progress = Math.round((index / (totalSteps - 1)) * 100);
+        // Update progress bar (25%, 50%, 75%, 100%)
+        const progress = Math.round(((index + 1) / totalSteps) * 100);
         if (progressBar) progressBar.style.width = progress + '%';
+        const pctEl = quizForm.querySelector('.quiz-progress-pct');
+        if (pctEl) pctEl.textContent = progress;
         currentStep = index;
     }
 

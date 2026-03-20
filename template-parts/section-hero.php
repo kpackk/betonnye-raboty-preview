@@ -9,34 +9,27 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <section class="section-hero" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/hero-bg.jpg');">
     <div class="container">
-        <h1 class="hero-title">Бетонные и монолитные работы в <span>Луганске и ЛНР</span></h1>
+        <h1 class="hero-title">Бетонные и монолитные работы в <b>Луганске и ЛНР</b></h1>
         <ul class="hero-services">
-            <li>&#x1F536; Заливка всех видов фундаментов</li>
-            <li>&#x1F536; Устройство стяжки пола</li>
-            <li>&#x1F536; Бетонирование тротуаров и дорожек</li>
-            <li>&#x1F536; Заливка монолитных конструкций</li>
+            <li><span class="diamond">&#9670;</span>Заливка всех видов фундаментов</li>
+            <li><span class="diamond">&#9670;</span>Устройство стяжки пола</li>
+            <li><span class="diamond">&#9670;</span>Бетонирование тротуаров и дорожек</li>
+            <li><span class="diamond">&#9670;</span>Заливка монолитных конструкций</li>
+            <li><span class="diamond">&#9670;</span>Обустройство площадок под авто</li>
+            <li><span class="diamond">&#9670;</span>Декоративное бетонирование</li>
         </ul>
         <div class="hero-benefits">
             <div class="hero-benefit">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50"/>
-                    <path d="M7 12.5L10.5 16L17 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Бесплатный выезд и расчет сметы</span>
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M11 18.5L15.5 23L25 13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="hero-benefit-text"><strong>Бесплатный<br>выезд и расчет<br>сметы</strong></div>
             </div>
             <div class="hero-benefit">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50"/>
-                    <path d="M7 12.5L10.5 16L17 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Гарантия на все работы до 5 лет</span>
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M11 18.5L15.5 23L25 13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="hero-benefit-text"><strong>Гарантия на<br>все работы до<br>5 лет</strong></div>
             </div>
             <div class="hero-benefit">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <circle cx="12" cy="12" r="12" fill="#4CAF50"/>
-                    <path d="M7 12.5L10.5 16L17 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Строгое соблюдение СНиП и ГОСТ</span>
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M11 18.5L15.5 23L25 13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="hero-benefit-text"><strong>Строгое<br>соблюдение<br>СНиП и ГОСТ</strong></div>
             </div>
         </div>
         <button class="btn-cta" data-modal="modal-consultation">Консультация мастера</button>

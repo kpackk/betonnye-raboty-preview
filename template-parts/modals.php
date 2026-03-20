@@ -20,14 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<form data-form-name="Попап скачать прайс">
 			<label class="modal-select-label">Выберите куда вам удобнее отправить прайс?</label>
 			<select name="messenger">
-				<option value="WhatsApp">Получить в WhatsApp</option>
 				<option value="Telegram">Получить в Telegram</option>
 				<option value="Viber">Получить в Viber</option>
 			</select>
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Получить прайс сейчас</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>
@@ -50,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Заказать звонок</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>
@@ -67,14 +66,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>Оставьте заявку и получите расчет в течении 60 минут!</p>
 			<label>Выберите куда вам выслать?</label>
 			<select name="messenger">
-				<option value="WhatsApp">Получить в WhatsApp</option>
-				<option value="Viber">Получить в Viber</option>
 				<option value="Telegram">Получить в Telegram</option>
+				<option value="Viber">Получить в Viber</option>
 			</select>
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Получить смету бесплатно</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>
@@ -91,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Участвовать в акции</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>
@@ -108,7 +106,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Оставить заявку</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>
@@ -132,7 +130,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Заказать звонок</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>
@@ -156,7 +154,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<input type="text" name="phone" placeholder="Ваш номер телефона" required>
 			<button type="submit" class="btn-submit">Оставить заявку</button>
 			<label class="form-privacy">
-				<input type="checkbox" checked>
+				<input type="checkbox">
 				<span>Согласен с условиями <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">политики конфиденциальности данных</a></span>
 			</label>
 		</form>

@@ -1,0 +1,22 @@
+node_modules/
+package.json
+package-lock.json
+
+# Dev/debug scripts
+check-*.js
+measure-*.js
+compare-*.js
+capture-*.js
+analyze-*.js
+inspect-*.js
+verify-*.js
+find-*.js
+extract-*.js
+get-*.js
+deep-*.js
+detail-*.js
+orig-*.js
+pixel-*.js
+
+# Visual testing snapshots
+.claude/visual/

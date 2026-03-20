@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Validate privacy checkbox
             const privacyCheck = form.querySelector('.form-privacy input[type="checkbox"]');
             if (privacyCheck && !privacyCheck.checked) {
-                privacyCheck.closest('.form-privacy').style.color = 'red';
+                const privacyLabel = privacyCheck.closest('.form-privacy');
+                privacyLabel.style.color = 'red';
+                privacyLabel.classList.remove('shake');
+                void privacyLabel.offsetWidth; // trigger reflow
+                privacyLabel.classList.add('shake');
                 return;
             }
 

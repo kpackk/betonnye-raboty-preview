@@ -51,19 +51,19 @@ defined( 'ABSPATH' ) || exit;
 		<div class="footer-col footer-info-col">
 			<h4>Информация</h4>
 			<p>Копирование и распространение материалов сайта без письменного согласия правообладателя запрещено.</p>
-			<p>Все права защищены</p>
-			<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="footer-info__link">Политика конфиденциальности</a>
-			<a href="#" class="footer-info__link">Правовая информация</a>
+			<p>Сайт содержит информацию общего характера, актуальные данные уточняйте у наших специалистов.</p>
 		</div>
 	</div>
 
 	<div class="footer-bottom container">
-		<span><?php echo esc_html( sprintf( 'Обновлен: %s', wp_date( 'j.n.Y' ) ) ); ?></span>
+		<span>Все права защищены</span>
+		<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="footer-bottom__link">Политика конфиденциальности</a>
+		<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="footer-bottom__link">Правовая информация</a>
 	</div>
 </footer>
 
 <!-- Cookie consent banner -->
-<div class="cookie-banner" id="cookieBanner" role="alert" aria-live="polite" style="display:none;">
+<div class="cookie-banner hidden" id="cookieBanner" role="alert" aria-live="polite">
 	<p>Для улучшения работы сайта мы используем файлы cookie. Вы всегда можете отключить файлы cookie в настройках вашего браузера.</p>
 	<button type="button" class="btn-cookie-accept" id="cookieAccept">Хорошо</button>
 </div>

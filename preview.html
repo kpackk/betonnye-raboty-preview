@@ -1,0 +1,4134 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бетонные работы в Луганске — Предпросмотр</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+/* ==========================================================================
+   MAIN STYLESHEET — Concrete Works Theme
+   All sections, components, responsive
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+    --color-primary: #A34100;
+    --color-primary-hover: #8a3700;
+    --color-text: #33302D;
+    --color-text-light: #F4F4F4;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray: #CACACA;
+    --color-light-bg: #F4F4F4;
+    --color-dark-bg: #1a1a1a;
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --container-width: 1046px;
+    --header-height: 92px;
+    --radius: 8px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET + BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.6;
+    background: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 53.33px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   4. HEADER (.site-header)
+   -------------------------------------------------------------------------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding-top: 13.3333px;
+    transition: all var(--transition);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    padding-bottom: 22px;
+    gap: 15px;
+}
+
+.header-logo img {
+    height: 75.5px;
+    width: auto;
+}
+
+.header-tagline {
+    font-size: 9.3333px;
+    color: var(--color-white);
+    line-height: 13.3333px;
+    letter-spacing: 0.28px;
+    font-family: var(--font-heading);
+}
+
+.header-tagline strong {
+    display: block;
+    font-weight: 700;
+}
+
+.header-tagline span:last-child {
+    display: block;
+}
+
+.header-address {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.header-address span {
+    font-size: 10.6667px;
+    font-weight: 700;
+    line-height: 16.6667px;
+    letter-spacing: 0.32px;
+    font-family: var(--font-heading);
+}
+
+.header-btn.btn-price {
+    background: transparent;
+    color: var(--color-white);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10.6667px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    border: none;
+    transition: all var(--transition);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.header-btn.btn-price:hover {
+    opacity: 0.8;
+}
+
+.header-btn.btn-price svg {
+    width: 18px;
+    height: 18px;
+}
+
+.header-online {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-white);
+    font-size: 10.6667px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.header-online img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.header-phone-wrap {
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.header-phone {
+    color: var(--color-white);
+    font-size: 13.3333px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    line-height: 17.3333px;
+    text-decoration: none;
+    display: block;
+    transition: color var(--transition);
+    white-space: nowrap;
+}
+
+.header-phone:hover {
+    color: var(--color-primary);
+}
+
+.btn-callback {
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10.6667px;
+    line-height: 12.6667px;
+    transition: all var(--transition);
+    white-space: nowrap;
+    letter-spacing: 0.533333px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.btn-callback:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-white);
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: var(--color-white);
+    transition: var(--transition);
+    display: block;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Header scrolled state */
+.site-header.scrolled {
+    background: rgba(26, 26, 26, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.site-header.scrolled .header-inner {
+    height: calc(var(--header-height) - 20px);
+}
+
+.site-header.scrolled .header-logo img {
+    height: 32px;
+}
+
+/* Mobile navigation */
+.mobile-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-dark-bg);
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav a {
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color var(--transition);
+}
+
+.mobile-nav a:hover {
+    color: var(--color-primary);
+}
+
+.mobile-nav .header-phone {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.mobile-nav .btn-callback {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   5. HERO (.section-hero)
+   -------------------------------------------------------------------------- */
+.section-hero {
+    min-height: 748px;
+    background-size: cover;
+    background-position: center right;
+    position: relative;
+}
+
+.section-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: none;
+    z-index: 0;
+}
+
+.section-hero .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 171px;
+    padding-bottom: 60px;
+}
+
+.hero-title {
+    font-size: 47px;
+    color: var(--color-white);
+    font-weight: 300;
+    margin-bottom: -45px;
+    padding-bottom: 54.1067px;
+    max-width: 586px;
+    font-family: var(--font-heading);
+    line-height: 60px;
+    letter-spacing: 0.94px;
+}
+
+.hero-title b {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 47px;
+}
+
+.hero-services {
+    list-style: none;
+    color: rgb(244, 244, 244);
+    font-size: 15.36px;
+    margin-bottom: 25px;
+    line-height: 25.6px;
+    padding: 0;
+    font-family: var(--font-heading);
+}
+
+.hero-services li {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hero-services .diamond {
+    color: #D4852E;
+    font-size: 24px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.hero-benefits {
+    display: flex;
+    gap: 46.6667px;
+    margin-bottom: 25.0133px;
+    flex-wrap: wrap;
+}
+
+.hero-benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-white);
+    font-size: 15px;
+}
+
+.hero-benefit svg {
+    width: 26.6667px;
+    height: 26.6667px;
+    flex-shrink: 0;
+}
+
+.hero-benefit img {
+    width: 26.6667px;
+    height: 26.6667px;
+    flex-shrink: 0;
+}
+
+.hero-benefit-text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17.3333px;
+    letter-spacing: 0.48px;
+    font-family: var(--font-heading);
+}
+
+.btn-cta {
+    background: linear-gradient(180deg, #D4852E 0%, #A34100 100%);
+    color: var(--color-white);
+    padding: 0 33.3333px;
+    height: 66.6667px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-heading);
+    letter-spacing: normal;
+    border-radius: 1600px;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(255, 255, 255, 0.45) 0px 0px 14px 0px inset;
+    min-width: 366.6667px;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta:hover {
+    background: linear-gradient(180deg, #e8993e 0%, #b84a00 100%);
+    box-shadow: inset 0 0 24px 0 rgba(255, 255, 255, 0.55);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   6. QUIZ (.section-quiz)
+   -------------------------------------------------------------------------- */
+.section-quiz {
+    background: rgb(251, 251, 251);
+    padding: 51.2px 0 70px;
+}
+
+.section-quiz .section-title {
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 1.333;
+    color: rgb(51, 48, 45);
+    margin-bottom: 13px;
+}
+
+.section-quiz .section-title span {
+    color: inherit;
+    font-weight: 700;
+}
+
+.section-quiz .section-subtitle {
+    font-size: 21.33px;
+    color: rgb(51, 48, 45);
+    margin-top: 0;
+    margin-bottom: 33.33px;
+    line-height: 2.5;
+}
+
+.quiz-inner {
+    display: flex;
+    gap: 0;
+    align-items: start;
+}
+
+.quiz-form {
+    flex: 1;
+    background: rgb(251, 251, 251);
+    border-radius: 7.68px;
+    padding: 26.67px 60px 33.33px 60px;
+    box-shadow: rgba(198, 198, 198, 0.37) 0px 0px 100px 0px;
+}
+
+.quiz-progress-wrap {
+    margin-bottom: 30px;
+}
+
+.quiz-progress {
+    position: relative;
+    height: 26.67px;
+    background: #fff;
+    border-radius: 7.68px;
+    padding: 3.33px 4px;
+}
+
+.quiz-progress-bar {
+    display: block;
+    height: 100%;
+    border-radius: 7.68px;
+    background: rgb(163, 65, 0);
+    transition: width 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='25' viewBox='0 0 23 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.22' d='M11.3982 25H0L11.3982 0H23L11.3982 25Z' fill='white'/%3E%3C/svg%3E");
+    background-size: 12px 100%;
+    background-repeat: repeat-x;
+    background-position: left center;
+    pointer-events: none;
+}
+
+.quiz-progress-label {
+    position: absolute;
+    right: 218px;
+    bottom: calc(100% + 2px);
+    display: flex;
+    align-items: center;
+    font-size: 10.67px;
+    color: #000;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+.quiz-step {
+    display: none;
+}
+
+.quiz-step.active {
+    display: block;
+}
+
+.quiz-question {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 26.67px;
+    font-family: var(--font-heading);
+    color: var(--color-text);
+}
+
+.quiz-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 27px;
+    margin-bottom: 4px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 293px;
+    padding: 14.67px 13.33px;
+    border: 0.5px solid #F7F7F7;
+    background: #F7F7F7;
+    border-radius: 7.68px;
+    cursor: pointer;
+    transition: border-color var(--transition);
+    font-size: 14px;
+    line-height: 1.15;
+    color: var(--color-text);
+    margin: 10px 0;
+}
+
+.quiz-option:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.quiz-option input[type="radio"] {
+    display: none;
+}
+
+.quiz-option::before {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background: #fbfbfb;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.quiz-option.selected::before {
+    background: var(--color-primary);
+}
+
+.quiz-option.selected {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    gap: 15px;
+}
+
+.quiz-btn {
+    padding: 14px 30px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 13.33px;
+}
+
+.quiz-btn-next {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+}
+
+.quiz-btn-next:hover {
+    background: var(--color-primary-hover);
+}
+
+.quiz-btn-back {
+    background: transparent;
+    border: 2px solid var(--color-gray);
+    color: var(--color-text);
+}
+
+.quiz-btn-back:hover {
+    border-color: var(--color-text);
+}
+
+.quiz-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quiz-sidebar {
+    width: 236px;
+    flex-shrink: 0;
+    position: relative;
+    padding: 17.33px 16.67px 18px;
+    border-radius: 7.68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    background-image: url("assets/img/info-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quiz-sidebar-status {
+    position: absolute;
+    top: 17.33px;
+    left: 20.67px;
+    background: rgb(49, 185, 57);
+    color: #fff;
+    height: 30px;
+    width: 75px;
+    border-radius: 7.68px;
+    padding: 0 13.33px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-sidebar img {
+    width: 187px;
+    height: 197px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0;
+}
+
+.quiz-sidebar .quiz-sidebar-name {
+    background: #fff;
+    border-radius: 7.68px;
+    padding: 13.33px 20px;
+    height: 44px;
+    font-size: 13.33px;
+    font-weight: 600;
+    text-align: center;
+    width: 187px;
+    margin-bottom: 30.67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+}
+
+.quiz-sidebar-text {
+    font-size: 12px;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 39.33px;
+    flex-grow: 1;
+    line-height: 1.389;
+    letter-spacing: 0.04em;
+    color: inherit;
+}
+
+.quiz-sidebar-bonuses {
+    width: 100%;
+}
+
+.quiz-sidebar-bonuses > p {
+    font-weight: 600;
+    font-size: 13.33px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 15.33px;
+}
+
+.quiz-bonus-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.quiz-bonus-item {
+    height: 57px;
+    border-radius: 7.68px;
+    overflow: hidden;
+    position: relative;
+    padding: 0 20px 0 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    background: transparent;
+    width: 100%;
+}
+
+.quiz-bonus-item:first-child {
+    margin-top: 0;
+}
+
+.quiz-bonus-item-img {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 7.68px;
+}
+
+.quiz-bonus-item-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.6);
+    border-radius: 7.68px;
+    z-index: 2;
+}
+
+.quiz-bonus-item-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: 13px;
+}
+
+.quiz-bonus-item span {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.quiz-bonus-item-icon {
+    position: relative;
+    z-index: 3;
+    background: rgb(163, 65, 0);
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.quiz-bonus-item-icon img {
+    width: 7px;
+    height: 9px;
+}
+
+.quiz-contact-form input[type="text"],
+.quiz-contact-form input[type="email"],
+.quiz-contact-form input[type="tel"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--radius);
+    font-size: 16px;
+    margin-bottom: 12px;
+    transition: border-color var(--transition);
+}
+
+.quiz-contact-form input[type="text"]:focus,
+.quiz-contact-form input[type="email"]:focus,
+.quiz-contact-form input[type="tel"]:focus {
+    border-color: var(--color-primary);
+}
+
+.quiz-messenger-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.quiz-messenger-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 15px;
+}
+
+.quiz-messenger-options label:hover {
+    border-color: var(--color-primary);
+}
+
+.quiz-messenger-options input[type="radio"] {
+    display: none;
+}
+
+.quiz-messenger-options input[type="radio"]:checked + span,
+.quiz-messenger-options label.selected {
+    border-color: var(--color-primary);
+}
+
+.quiz-messenger-options input[type="radio"]:checked ~ span {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   7. ABOUT (.section-about)
+   -------------------------------------------------------------------------- */
+.section-about {
+    padding: 42px 0 0;
+}
+
+.section-about .section-title {
+    text-align: left;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.about-inner {
+    display: grid;
+    grid-template-columns: 507px 400px;
+    gap: 139px;
+    align-items: start;
+}
+
+.about-image {
+    margin-top: 103px;
+}
+
+.about-stats {
+    font-size: 16.6667px;
+    font-weight: 400;
+    color: #555;
+    font-family: var(--font-heading);
+    margin-bottom: 26.6667px;
+    line-height: 24.6667px;
+}
+
+.about-stats-label {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 13px;
+    line-height: 19px;
+}
+.about-text p {
+    margin: 0 0 12px;
+}
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text strong {
+    color: var(--color-text);
+}
+
+.about-image img {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.about-content .section-title {
+    text-align: left;
+    margin-bottom: 27px;
+}
+
+/* --------------------------------------------------------------------------
+   8. SERVICES (.section-services)
+   -------------------------------------------------------------------------- */
+.section-services {
+    background: var(--color-light-bg);
+    padding: 0 0 70px;
+    overflow: hidden;
+}
+
+.section-services .container {
+    position: relative;
+}
+
+.section-title-shadow {
+    position: absolute;
+    top: -5.36458vw;
+    left: -25.5208vw;
+    width: 151.25vw;
+    height: 12.4479vw;
+    text-align: center;
+    font-weight: 200;
+    font-size: 13.0208vw;
+    letter-spacing: 0.25em;
+    background: radial-gradient(106.28% 106.28% at 49.99% 0%, rgb(240, 240, 240) 0%, rgba(240, 240, 240, 0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    z-index: -1;
+    pointer-events: none;
+    font-family: var(--font-heading);
+}
+
+.section-services .section-label {
+    display: none;
+}
+
+.section-services .section-title {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 37.33px;
+    font-size: 45px;
+    font-weight: 300;
+    color: rgb(51, 48, 45);
+    letter-spacing: 1.6px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    font-family: var(--font-heading);
+}
+
+.section-title span {
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: -35px;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 37.33px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    position: relative;
+    border-radius: 7.68px;
+    overflow: hidden;
+    min-height: 352.4px;
+    cursor: pointer;
+    padding: 32px 25.33px 22px;
+}
+
+.service-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    opacity: 0.4;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.service-card:hover::after {
+    opacity: 0.7;
+}
+
+.service-card-content {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+}
+
+.service-card-header {
+    width: 147px;
+    flex-shrink: 0;
+    font-size: 15.36px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    line-height: 23.33px;
+    letter-spacing: 0.04em;
+}
+
+.service-card-checklist {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 1.25vw;
+    letter-spacing: 0.04em;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.service-card:hover .service-card-checklist {
+    opacity: 1;
+}
+
+.service-card-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.btn-service-price {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.service-card:hover .btn-service-price {
+    opacity: 1;
+}
+
+.btn-service {
+    background: #A34100;
+    color: var(--color-white);
+    width: 133.33px;
+    height: 40px;
+    padding: 0;
+    border-radius: 1600px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 16px;
+    letter-spacing: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-service:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(163, 65, 0, 0.4);
+}
+
+.btn-service-price {
+    color: var(--color-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: opacity var(--transition);
+}
+
+.btn-service-price:hover {
+    opacity: 0.8;
+}
+
+.btn-service-price img {
+    width: 16px;
+    height: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   9. GUARANTEES (.section-guarantees)
+   -------------------------------------------------------------------------- */
+.section-guarantees {
+    padding: 0;
+    margin: 66.67px 0;
+}
+
+.section-guarantees .container {
+    position: relative;
+    overflow: hidden;
+    background: url('assets/img/fon-betonnye-raboty.jpg') center/cover no-repeat;
+    padding: 66.67px 380px 66.67px 66.67px;
+}
+
+.section-guarantees .section-title {
+    color: var(--color-white);
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 36.67px;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 60px;
+    letter-spacing: 1.6px;
+}
+
+.section-guarantees .section-title b {
+    font-weight: 700;
+}
+
+
+.guarantees-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px 40px;
+}
+
+.guarantee-item {
+    display: flex;
+    flex: 0 1 auto;
+    width: 160px;
+    gap: 10px;
+    align-items: center;
+}
+
+.guarantee-item p {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.6667px;
+    letter-spacing: 0.48px;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.guarantees-note {
+    position: absolute;
+    top: 4px;
+    right: 81px;
+    width: 255px;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 10.6667px;
+    color: #ffffff;
+    line-height: 16px;
+    letter-spacing: 0.426667px;
+    margin: 0;
+    padding: 0;
+}
+
+.guarantees-image {
+    position: absolute;
+    top: 86px;
+    right: 31px;
+    width: 355px;
+}
+
+.guarantees-image img {
+    width: 100%;
+    height: 503px;
+    display: block;
+    object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   10. PORTFOLIO (.section-portfolio)
+   -------------------------------------------------------------------------- */
+.section-portfolio {
+    padding: 51px 0 67px;
+    background: var(--color-white);
+}
+
+.section-portfolio .section-title {
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 43.33px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.section-portfolio .section-title b {
+    font-weight: 700;
+}
+
+.portfolio-tab {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 30px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 48.84px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   11. TEAM (.section-team)
+   -------------------------------------------------------------------------- */
+.section-team {
+    padding: 51px 0 80px;
+    background: var(--color-white);
+}
+
+.section-team .section-title {
+}
+
+.section-team .container {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-layout {
+    display: grid;
+    grid-template-columns: 457px 1fr;
+    gap: 53px;
+    align-items: flex-start;
+}
+
+.team-heading-col {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+}
+
+.team-heading-col .section-title {
+    text-align: left;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 1.47px;
+    margin-bottom: 15.36px;
+}
+
+.team-heading-col .section-subtitle-accent {
+    text-align: left;
+    font-size: 26.88px;
+    font-weight: 400;
+    line-height: 38.4px;
+    letter-spacing: normal;
+    color: var(--color-text);
+    margin-bottom: 0;
+}
+
+.team-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 33.28px;
+}
+
+.team-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 333px;
+    margin-bottom: 0;
+}
+
+.team-card img {
+    display: block;
+    flex-shrink: 0;
+    width: 585px;
+    height: 333px;
+    object-fit: cover;
+    overflow: clip;
+}
+
+.team-card-number {
+    display: block;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin: 98.56px 31.03px 0 16.64px;
+    width: 21px;
+    height: 23px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+}
+
+.team-card-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 22px;
+    width: 443px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 16.67px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.team-card-overlay .team-item-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-bottom: 15.6px;
+    color: var(--color-white);
+}
+
+.team-card-overlay .team-item-desc {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18.67px;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   12. FAQ (.section-faq)
+   -------------------------------------------------------------------------- */
+.section-faq {
+    padding: 41.67px 0 38.4px;
+    background: transparent;
+}
+
+.faq-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-auto-flow: column;
+    row-gap: 17px;
+    column-gap: 34px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.section-faq .section-title {
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 36.67px;
+}
+
+.faq-item {
+    background: rgb(248, 250, 251);
+    border-radius: 7.68px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 16.67px 30px 16.67px 36.67px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    transition: color var(--transition);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.faq-question:hover {
+    color: var(--color-primary);
+}
+
+.faq-btn {
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    min-width: 21px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-btn {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 30px 0 35px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 30px 17px 35px;
+}
+
+.faq-whatsapp {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.faq-whatsapp a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 14px 30px;
+    border-radius: 1600px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition);
+    font-size: 13.33px;
+}
+
+.faq-whatsapp a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.faq-whatsapp a img {
+    width: 22px;
+    height: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   13. CONSULTATION (.section-consultation)
+   -------------------------------------------------------------------------- */
+.section-consultation {
+    padding: 0;
+    color: var(--color-white);
+    position: relative;
+}
+
+.consultation-box {
+    background: url('assets/img/fon-master.jpg') center/cover no-repeat;
+    border-radius: 7.68px;
+    padding: 45px 62px 45px 85px;
+    position: relative;
+    overflow: hidden;
+}
+
+.consultation-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 471px;
+}
+
+.consultation-info {
+    flex: 0 1 auto;
+    width: 297px;
+    font-family: var(--font-heading);
+}
+
+.consultation-form-col {
+    flex: 0 0 267px;
+    font-family: var(--font-heading);
+}
+
+.consultation-phone {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 33.33px;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    text-decoration: none;
+    margin: 0;
+    letter-spacing: 0.4px;
+}
+
+.consultation-schedule {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 33.33px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+.consultation-messengers {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 40px;
+    height: 40px;
+}
+
+.consultation-messengers a {
+    display: flex;
+    width: 38.6667px;
+    height: 38.6667px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition);
+}
+
+.consultation-messengers a:first-of-type {
+    margin-right: 8px;
+}
+
+.consultation-messengers a:hover {
+    transform: scale(1.1);
+}
+
+.consultation-form-col .consultation-form-title {
+    font-size: 26.67px;
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 33.3333px;
+    letter-spacing: 0.533333px;
+    margin-bottom: 10px;
+}
+
+.consultation-form-col .form-list {
+    list-style: disc;
+    padding-left: 16.67px;
+    margin: 0 0 18.67px;
+}
+
+.consultation-form-col .form-list li {
+    font-size: 10.67px;
+    font-weight: 500;
+    line-height: 18.67px;
+    letter-spacing: 0.213333px;
+    color: rgb(255, 255, 255);
+    padding: 0;
+}
+
+.consultation-form-col .form-list li::before {
+    display: none;
+}
+
+.consultation-form-col input[type="text"] {
+    width: 100%;
+    height: 67px;
+    padding: 0 33.33px;
+    background: var(--color-white);
+    border: none;
+    color: #333;
+    border-radius: 1600px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.36px;
+    margin-bottom: 13.33px;
+    box-sizing: border-box;
+}
+
+.consultation-form-col .btn-submit {
+    width: 100%;
+    height: 67px;
+    padding: 0 33.33px;
+    font-size: 13.33px;
+    font-weight: 400;
+    letter-spacing: normal;
+    border-radius: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.consultation-manager {
+    position: absolute;
+    bottom: 0;
+    left: 330px;
+    width: 404.664px;
+}
+
+.consultation-manager-info {
+    position: absolute;
+    top: 244px;
+    left: 20px;
+    color: var(--color-white);
+    z-index: 1;
+    font-family: var(--font-heading);
+}
+
+.consultation-manager-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.6667px;
+    letter-spacing: 0.32px;
+    margin: 0;
+}
+
+.consultation-manager-role {
+    font-size: 10.6667px;
+    font-weight: 400;
+    line-height: 24.6667px;
+    letter-spacing: 0.213333px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+.consultation-manager img {
+    width: 404.664px;
+    height: 466.664px;
+    display: block;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.form-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.form-list li {
+    padding: 4px 0;
+    font-size: 15px;
+    color: var(--color-gray);
+}
+
+.form-list li::before {
+    content: '\2022';
+    color: var(--color-primary);
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.form-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-gray);
+    margin-top: 10px;
+}
+
+.form-privacy input[type="checkbox"] {
+    accent-color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.form-privacy a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: opacity var(--transition);
+}
+
+.form-privacy a:hover {
+    opacity: 0.8;
+}
+
+/* consultation context — match original form-checkbox */
+.consultation-form-col .form-privacy {
+    font-size: 9.3333px;
+    line-height: 12.6667px;
+    gap: 10.6667px;
+    color: rgb(255, 255, 255);
+    margin-top: 13.3333px;
+}
+
+.consultation-form-col .form-privacy input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 13.3333px;
+    height: 13.3333px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.consultation-form-col .form-privacy input[type="checkbox"]:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 7'%3E%3Cpath d='M1 3.5l2.5 2.5 5.5-5.5' stroke='white' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5.3333px 4px;
+}
+
+.consultation-form-col .form-privacy a {
+    color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   14. PRICE TABLE (.section-price-table)
+   -------------------------------------------------------------------------- */
+.section-price-table {
+    padding: 80px 0;
+}
+
+.price-disclaimer {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.price-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 100%;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-white);
+}
+
+.price-table th {
+    background: var(--color-dark-bg);
+    color: var(--color-white);
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.price-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.price-table tr:nth-child(even) {
+    background: var(--color-light-bg);
+}
+
+.price-table tr:hover {
+    background: rgba(163, 65, 0, 0.05);
+}
+
+.price-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* --------------------------------------------------------------------------
+   15. FOOTER (.site-footer)
+   -------------------------------------------------------------------------- */
+.site-footer {
+    background: var(--color-dark-bg);
+    color: var(--color-white);
+    padding: 60px 0 20px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    padding: 4px 0;
+}
+
+.footer-col li,
+.footer-col p {
+    font-size: 15px;
+    color: var(--color-gray);
+    line-height: 1.6;
+}
+
+.footer-col a {
+    color: var(--color-gray);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer-col a:hover {
+    color: var(--color-primary);
+}
+
+.footer-logo-col img,
+.footer-logo-col svg {
+    height: 40px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer-logo-col p {
+    font-size: 13px;
+    color: var(--color-gray);
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: var(--color-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom__link,
+.footer-bottom a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer-bottom__link:hover,
+.footer-bottom a:hover {
+    color: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   16. MODALS (.modal-overlay)
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal {
+    background: var(--color-white);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all var(--transition);
+}
+
+.modal-close:hover {
+    color: var(--color-text);
+    background: var(--color-light-bg);
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.modal-desc {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.modal select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--radius);
+    font-size: 16px;
+    margin-bottom: 15px;
+    appearance: none;
+    background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 16px center;
+    cursor: pointer;
+    transition: border-color var(--transition);
+}
+
+.modal select:focus {
+    border-color: var(--color-primary);
+}
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="tel"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--radius);
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color var(--transition);
+}
+
+.modal input[type="text"]:focus,
+.modal input[type="email"]:focus,
+.modal input[type="tel"]:focus {
+    border-color: var(--color-primary);
+}
+
+.modal .btn-submit {
+    width: 100%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.modal .btn-submit:hover {
+    background: var(--color-primary-hover);
+}
+
+.modal .form-privacy {
+    color: #999;
+}
+
+/* ---------- Shake animation for privacy checkbox ---------- */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+    20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.form-privacy.shake {
+    animation: shake 0.6s ease;
+}
+
+/* ---------- Portfolio Lightbox ---------- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10001;
+    line-height: 1;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+    opacity: 0.7;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 48px;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 10001;
+    transition: opacity 0.2s;
+    user-select: none;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    opacity: 0.7;
+}
+
+.lightbox-prev {
+    left: 10px;
+}
+
+.lightbox-next {
+    right: 10px;
+}
+
+.lightbox-thumbs {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    max-width: 90vw;
+    overflow-x: auto;
+    padding: 5px;
+}
+
+.lightbox-thumb {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    border: 2px solid transparent;
+    flex-shrink: 0;
+}
+
+.lightbox-thumb.active {
+    opacity: 1;
+    border-color: var(--color-primary);
+}
+
+.lightbox-thumb:hover {
+    opacity: 0.8;
+}
+
+/* Portfolio images cursor */
+.portfolio-slide img,
+.portfolio-grid img {
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   17. BUTTONS (shared)
+   -------------------------------------------------------------------------- */
+.btn-submit {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   18. COOKIE BANNER
+   -------------------------------------------------------------------------- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-dark-bg);
+    color: var(--color-white);
+    padding: 15px 20px;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 13px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-banner.hidden {
+    display: none;
+}
+
+.cookie-banner a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.btn-cookie-accept {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: background var(--transition);
+}
+
+.btn-cookie-accept:hover {
+    background: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   19. INNER PAGES
+   -------------------------------------------------------------------------- */
+.page-breadcrumbs {
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: var(--header-height);
+    color: #666;
+}
+
+.page-breadcrumbs a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity var(--transition);
+}
+
+.page-breadcrumbs a:hover {
+    opacity: 0.8;
+}
+
+.page-breadcrumbs span {
+    margin: 0 8px;
+    color: var(--color-gray);
+}
+
+.page-content {
+    padding: 40px 0 80px;
+}
+
+.page-content h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.page-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.page-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.page-content ul li {
+    padding: 4px 0;
+    list-style: disc;
+    line-height: 1.7;
+}
+
+.page-content img {
+    border-radius: var(--radius);
+    margin: 20px 0;
+}
+
+/* --------------------------------------------------------------------------
+   20. UTILITY CLASSES
+   -------------------------------------------------------------------------- */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   21. RESPONSIVE — 1200px
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .header-tagline,
+    .header-address {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   22. RESPONSIVE — 992px
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .about-inner,
+    .consultation-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-inner {
+        flex-direction: column;
+    }
+
+    .quiz-sidebar {
+        order: -1;
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        height: 350px;
+    }
+
+    .team-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .section-guarantees .container {
+        padding: 60px 200px 60px 40px;
+    }
+
+    .guarantees-image {
+        width: 220px;
+    }
+
+    .section-title,
+    .section-quiz .section-title,
+    .section-services .section-title,
+    .section-guarantees .section-title,
+    .section-portfolio .section-title,
+    .section-faq .section-title {
+        font-size: 30px;
+    }
+
+    .section-guarantees .section-title {
+        line-height: 1.3;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   23. RESPONSIVE — 768px
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 25vw;
+    }
+
+    .site-header {
+        padding-top: 2vw;
+    }
+
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 2vw;
+    }
+
+    .header-logo img,
+    .site-header.scrolled .header-logo img {
+        height: 15vw;
+        width: auto;
+    }
+
+    .site-header.scrolled .header-inner {
+        height: calc(var(--header-height) - 3vw);
+    }
+
+    .header-btn.btn-price,
+    .header-online {
+        display: none;
+    }
+
+    .header-tagline {
+        display: block;
+        text-align: center;
+        width: 100%;
+        order: 3;
+        margin-top: -1vw;
+    }
+
+    .header-phone-wrap {
+        text-align: center;
+    }
+
+    .header-phone {
+        font-size: 3.75vw;
+        line-height: 1.2;
+    }
+
+    .header-phone-wrap .btn-callback {
+        font-size: 2.5vw;
+        display: block;
+        margin-top: 1vw;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    /* Hero — vw units like original */
+    .section-hero {
+        min-height: auto;
+    }
+
+    .section-hero .container {
+        padding-top: calc(var(--header-height) + 8vw);
+        padding-bottom: 30vw;
+    }
+
+    .hero-title {
+        font-size: 7.5vw;
+        line-height: 10vw;
+        width: 80vw;
+        max-width: none;
+        margin: 0 auto 3vw;
+        text-align: center;
+    }
+
+    .hero-title b {
+        font-size: 7.5vw;
+        line-height: 10vw;
+    }
+
+    .hero-services {
+        font-size: 4vw;
+        line-height: 5.875vw;
+        width: 67.1875vw;
+        margin: 0 auto 7.8125vw;
+    }
+
+    .hero-services li {
+        justify-content: flex-start;
+    }
+
+    .hero-benefits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 5vw;
+        margin-bottom: 7.8125vw;
+    }
+
+    .hero-benefit {
+        flex-direction: column;
+        align-items: center;
+        max-width: 39.125vw;
+    }
+
+    .hero-benefit svg {
+        width: 6.875vw;
+        height: 6.875vw;
+    }
+
+    .hero-benefit-text {
+        font-size: 3.75vw;
+        line-height: 5.25vw;
+        text-align: center;
+    }
+
+    .btn-cta {
+        width: 76.875vw;
+        min-width: auto;
+        height: 18.75vw;
+        font-size: 4vw;
+        padding: 0;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    /* Section titles — vw */
+    .section-title,
+    .section-quiz .section-title,
+    .section-about .section-title,
+    .section-services .section-title,
+    .section-guarantees .section-title,
+    .section-portfolio .section-title,
+    .section-team .section-title,
+    .section-faq .section-title,
+    .section-consultation .section-title {
+        font-size: 6.25vw;
+        line-height: 9.375vw;
+        margin-bottom: 5vw;
+    }
+
+    .section-guarantees .section-title {
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .about-heading {
+        font-size: 5.25vw;
+        line-height: 7.25vw;
+    }
+
+    .about-stats span {
+        font-size: 3.75vw;
+    }
+
+    /* Guarantees — mobile */
+    .section-guarantees .container {
+        padding: 6.25vw;
+    }
+
+    .guarantees-grid {
+        justify-content: space-between;
+        gap: 4.6875vw 0;
+        margin-bottom: 4vw;
+    }
+
+    .guarantee-item {
+        flex: none;
+        width: 32.8125vw;
+        max-width: 32.8125vw;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 4.6875vw;
+    }
+
+    .guarantee-item p {
+        font-size: 3.75vw;
+        line-height: 4.25vw;
+    }
+
+    .guarantees-note {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-top: 4vw;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .guarantees-image {
+        position: static;
+        width: 60vw;
+        margin: 4vw auto 0;
+        transform: none;
+    }
+
+    .guarantees-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-card {
+        height: 280px;
+    }
+
+    .price-table {
+        font-size: 12px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 8px 6px;
+    }
+
+    .price-table th:first-child,
+    .price-table td:first-child {
+        width: 55%;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal {
+        padding: 25px;
+    }
+
+    /* Team — mobile */
+    .section-team .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team-layout {
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+
+    .team-heading-col {
+        position: static;
+    }
+
+    .team-heading-col .section-title {
+        font-size: 6.25vw;
+        text-align: center;
+    }
+
+    .team-heading-col .section-subtitle-accent {
+        font-size: 4.5vw;
+        line-height: 6.5vw;
+        text-align: center;
+    }
+
+    .team-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .team-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .team-card-overlay {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .section-title-shadow {
+        display: none;
+    }
+
+    /* Consultation — mobile */
+    .consultation-box {
+        padding: 6vw 4vw;
+    }
+
+    .consultation-inner {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .consultation-info {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .consultation-schedule {
+        font-size: 4vw;
+    }
+
+    .consultation-phone {
+        justify-content: center;
+        font-size: 5.25vw;
+    }
+
+    .consultation-messengers {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .consultation-form-col {
+        flex: none;
+        width: 100%;
+    }
+
+    .consultation-form-col .consultation-form-title {
+        text-align: center;
+        font-size: 4.75vw;
+    }
+
+    .consultation-form-col .form-list {
+        font-size: 3.75vw;
+    }
+
+    .consultation-manager {
+        position: relative;
+        left: 0;
+        width: 60vw;
+        margin: 4vw auto 0;
+    }
+
+    .consultation-manager img {
+        width: 100%;
+        height: auto;
+    }
+
+    .consultation-manager-info {
+        position: absolute;
+        top: auto;
+        bottom: 4vw;
+        left: 4vw;
+    }
+
+    .about-stats {
+        font-size: 4vw;
+    }
+
+    .consultation-label {
+        font-size: 6.25vw;
+        line-height: 9.375vw;
+        min-height: auto;
+        margin-bottom: 6vw;
+        padding-top: 4vw;
+    }
+
+    .consultation-inner {
+        gap: 4vw;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .footer-logo-col p {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+    }
+
+    .price-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   24. RESPONSIVE — 480px
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .container {
+        width: 86.25vw;
+        padding: 0;
+    }
+
+    .quiz-form {
+        padding: 4.6875vw;
+    }
+
+    .quiz-question {
+        font-size: 4.625vw;
+    }
+
+    .quiz-btn {
+        padding: 3vw 5vw;
+        font-size: 3.75vw;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        height: 300px;
+    }
+
+    .faq-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+    }
+
+    .faq-question {
+        padding: 15px 15px 15px 20px;
+        font-size: 4vw;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 15px 15px 20px;
+    }
+
+    .team-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .consultation-form {
+        padding: 4.6875vw;
+    }
+
+    .modal {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .section-quiz,
+    .section-about,
+    .section-services,
+    .section-portfolio,
+    .section-team,
+    .section-faq,
+    .section-consultation,
+    .section-price-table {
+        padding: 9.375vw 0;
+    }
+
+    .portfolio-grid img,
+    .portfolio-slide img {
+        height: 220px;
+    }
+}
+
+.quiz-step-label {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+.quiz-hint { font-size: 10.67px; color: #999; margin-top: 0; margin-bottom: 0; }
+.section-label { text-align: center; font-size: 14px; color: #888; margin-bottom: 8px; }
+.section-subtitle-accent { text-align: center; color: var(--color-primary); font-size: 20px; margin-bottom: 40px; font-family: var(--font-heading); }
+.header-online__links { display: flex; gap: 8px; }
+.header-online__link img, .header-online__link svg { width: 29px; height: 29px; border-radius: 50%; background: rgb(163, 65, 0); padding: 5px; box-sizing: border-box; }
+.consultation-info { display: flex; flex-direction: column; align-items: flex-start; padding-top: 0; }
+.consultation-label { font-family: var(--font-heading); font-size: 40px; font-weight: 300; line-height: 53.3333px; min-height: 267px; margin-top: 0; margin-bottom: 56.6667px; color: var(--color-white); letter-spacing: 1.6px; padding-top: 67px; }
+.consultation-label strong { font-weight: 700; }
+.consultation-schedule { letter-spacing: 0.32px; }
+.consultation-schedule strong { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.32px; }
+.consultation-msg-label { font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.75); margin: 0 17px 0 0; line-height: 20px; flex: 0 0 113px; letter-spacing: 0.48px; }
+.about-heading { font-size: 32px; line-height: 43.33px; font-weight: 400; letter-spacing: 1.28px; margin-bottom: 26.67px; }
+.about-stats span { font-size: 15px; font-weight: 400; color: #555; display: inline; }
+.about-text ul { padding-left: 20px; margin: 10px 0; }
+.about-text ul li { list-style: disc; padding: 3px 0; }
+.footer-info__link { display: block; margin-top: 8px; color: var(--color-gray); font-size: 13px; }
+.footer-info__link:hover { color: var(--color-primary); }
+.form-success p { color: #4CAF50; font-weight: 600; font-size: 18px; text-align: center; padding: 20px 0; }
+
+/* Late-defined responsive overrides (must come after ad-hoc rules above) */
+@media (max-width: 768px) {
+    .about-heading { font-size: 5vw; line-height: 7vw; margin-bottom: 3vw; }
+    .consultation-label { font-size: 6.25vw; line-height: 9.375vw; min-height: auto; margin-bottom: 6vw; padding-top: 4vw; }
+    .consultation-msg-label { font-size: 3.5vw; flex: none; }
+    .section-subtitle-accent { font-size: 4.5vw; margin-bottom: 5vw; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="#" class="header-logo">
+      <img src="assets/img/logo.png" alt="Бетонные работы Луганск">
+    </a>
+    <div class="header-tagline">
+      <span>Профессиональные</span>
+      <strong>бетонные и монолитные работы</strong>
+      <span>в Луганске и ЛНР</span>
+    </div>
+    <div class="header-address">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" fill="#E74C3C"/></svg>
+      <span>г. Луганск,<br>ул. Фрунзе 42</span>
+    </div>
+    <a href="#" class="header-btn btn-price" data-modal="modal-price">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17 12v5H3v-5H1v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2Z" fill="currentColor"/><path d="M10 15l4-5h-3V1H9v9H6l4 5Z" fill="currentColor"/></svg>
+      <span>Скачать прайс с ценами</span>
+    </a>
+    <div class="header-online">
+      <span><span style="color:#4CAF50; font-size:10px; margin-right:4px;">&#9679;</span>Мы онлайн, <em>пишите</em></span>
+      <div class="header-online__links">
+        <a href="https://t.me/+79592591159" class="header-online__link header-online__link--tg" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#0088cc"/><path d="M22.5 10.5l-2.5 11.8c-.2.8-.6 1-1.3.6l-3.5-2.6-1.7 1.6c-.2.2-.3.3-.7.3l.3-3.5 6.5-5.8c.3-.3-.1-.4-.4-.2l-8 5-3.4-1.1c-.7-.2-.8-.7.2-1.1l13.4-5.2c.6-.2 1.2.2 1 1z" fill="#fff"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="header-phone-wrap">
+      <a href="tel:+79592591159" class="header-phone">+7 (959) 259-11-59</a>
+      <button type="button" class="btn-callback" data-modal="modal-callback">ЗАКАЗ ЗВОНКА</button>
+    </div>
+    <button type="button" class="mobile-menu-toggle" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="section-hero" style="background-image: url('assets/img/hero-bg.jpg');">
+    <div class="container">
+        <h1 class="hero-title">Бетонные и монолитные работы в <b>Луганске и ЛНР</b></h1>
+        <ul class="hero-services">
+            <li><span class="diamond">&#9670;</span>Заливка всех видов фундаментов</li>
+            <li><span class="diamond">&#9670;</span>Устройство стяжки пола</li>
+            <li><span class="diamond">&#9670;</span>Бетонирование тротуаров и дорожек</li>
+            <li><span class="diamond">&#9670;</span>Заливка монолитных конструкций</li>
+            <li><span class="diamond">&#9670;</span>Обустройство площадок под авто</li>
+            <li><span class="diamond">&#9670;</span>Декоративное бетонирование</li>
+        </ul>
+        <div class="hero-benefits">
+            <div class="hero-benefit">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M11 18.5L15.5 23L25 13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="hero-benefit-text"><strong>Бесплатный<br>выезд и расчет<br>сметы</strong></div>
+            </div>
+            <div class="hero-benefit">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M11 18.5L15.5 23L25 13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="hero-benefit-text"><strong>Гарантия на<br>все работы до<br>5 лет</strong></div>
+            </div>
+            <div class="hero-benefit">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="18" r="16.5" stroke="#fff" stroke-width="3" fill="none"/><path d="M11 18.5L15.5 23L25 13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="hero-benefit-text"><strong>Строгое<br>соблюдение<br>СНиП и ГОСТ</strong></div>
+            </div>
+        </div>
+        <button class="btn-cta" data-modal="modal-consultation">Консультация мастера</button>
+    </div>
+</section>
+<!-- QUIZ -->
+<section class="section-quiz">
+    <div class="container">
+        <h2 class="section-title">Пройдите опрос и получите<br><span>смету и персональную скидку</span></h2>
+        <p class="section-subtitle">Это займет не более 2 минут</p>
+        <div class="quiz-inner">
+            <div class="quiz-form" id="quiz">
+                <div class="quiz-progress-wrap">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar" style="width: 25%"></div>
+                        <p class="quiz-progress-label">Расчет пройден на&nbsp;<span class="quiz-progress-pct">25</span>%</p>
+                    </div>
+                </div>
+                <div class="quiz-step active" data-step="1">
+                    <p class="quiz-step-label">Вопрос 1</p>
+                    <h3 class="quiz-question">Какие работы вы хотите заказать?</h3>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Заливка фундамента"><span>Заливка фундамента</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Укрепление фундамента"><span>Укрепление фундамента</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Бетонирование дорожек"><span>Бетонирование дорожек</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Бетонирование дворов"><span>Бетонирование дворов</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Площадка под авто"><span>Площадка под авто</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Заливка стяжки пола"><span>Заливка стяжки пола</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Бетонные отмостки"><span>Бетонные отмостки</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q1" value="Другие работы"><span>Другие работы</span></label>
+                    </div>
+                    <div class="quiz-nav"><span></span><button class="quiz-btn quiz-btn-next" disabled>Далее</button></div>
+                    <p class="quiz-hint">Чтобы продолжить ответьте на вопрос выше</p>
+                </div>
+                <div class="quiz-step" data-step="2">
+                    <p class="quiz-step-label">Вопрос 2</p>
+                    <h3 class="quiz-question">Когда нужно приступить к бетонным работам?</h3>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="quiz_q2" value="Как можно быстрее"><span>Как можно быстрее</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q2" value="В течение 3 дней"><span>В течение 3 дней</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q2" value="В течение 7 дней"><span>В течение 7 дней</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q2" value="В течение месяца"><span>В течение месяца</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q2" value="Только планируем работы"><span>Только планируем работы</span></label>
+                    </div>
+                    <div class="quiz-nav"><button class="quiz-btn quiz-btn-back">Назад</button><button class="quiz-btn quiz-btn-next" disabled>Далее</button></div>
+                </div>
+                <div class="quiz-step" data-step="3">
+                    <p class="quiz-step-label">Вопрос 3</p>
+                    <h3 class="quiz-question">Что вы хотите получить в подарок?</h3>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="quiz_q3" value="Индивидуальная скидка"><span>Индивидуальная скидка</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q3" value="Скидка для друга"><span>Скидка для друга</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_q3" value="Скидка на следующий заказ"><span>Скидка на следующий заказ</span></label>
+                    </div>
+                    <div class="quiz-nav"><button class="quiz-btn quiz-btn-back">Назад</button><button class="quiz-btn quiz-btn-next" disabled>Далее</button></div>
+                </div>
+                <div class="quiz-step" data-step="4">
+                    <h3 class="quiz-question">Ваша смета готова</h3>
+                    <p>Куда вам отправить коммерческое предложение?</p>
+                    <div class="quiz-messenger-options">
+                        <label class="quiz-option"><input type="radio" name="quiz_messenger" value="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0088cc"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.97 9.282c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.538-.194 1.006.13.833.94z"/></svg><span>Telegram</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_messenger" value="Viber"><svg width="20" height="20" viewBox="0 0 24 24" fill="#7360F2"><path d="M20.775 3.28C18.925 1.54 15.944.426 12.953.264h-.058C10.1.122 7.654.844 5.768 2.24 4.096 3.47 2.974 5.183 2.476 7.233c-.498 2.05-.39 4.356.308 6.66.076.252.163.5.26.744v4.49c0 .33.266.598.597.598h.002l4.368-.002c.267.11.54.207.82.29 1.23.365 2.484.548 3.724.548h.002c.132.002 7.09.077 10.027-3.236 1.414-1.594 2.133-3.68 2.133-6.19.002-3.222-1.14-6.438-4.142-7.855z"/></svg><span>Viber</span></label>
+                        <label class="quiz-option"><input type="radio" name="quiz_messenger" value="E-mail"><svg width="20" height="20" viewBox="0 0 24 24" fill="#EA4335"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span>E-mail</span></label>
+                    </div>
+                    <form class="quiz-contact-form" data-form-name="Форма квиза">
+                        <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+                        <input type="email" name="email" placeholder="Ваш e-mail" style="display:none">
+                        <button type="submit" class="btn-submit">Выслать смету</button>
+                        <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+                    </form>
+                    <div class="quiz-bonuses">
+                        <p>Вы также получите:</p>
+                        <div class="quiz-bonus-items">
+                            <div class="quiz-bonus-item">
+                                <div class="quiz-bonus-item-img"><img src="assets/img/calc-icon.png" alt=""></div>
+                                <span>Подробный расчет</span>
+                                <div class="quiz-bonus-item-icon"><img src="assets/img/calc-icon.png" alt=""></div>
+                            </div>
+                            <div class="quiz-bonus-item">
+                                <div class="quiz-bonus-item-img"><img src="assets/img/gift-icon.png" alt=""></div>
+                                <span>Подарок</span>
+                                <div class="quiz-bonus-item-icon"><img src="assets/img/calc-icon.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-nav"><button class="quiz-btn quiz-btn-back">Назад</button><span></span></div>
+                </div>
+            </div>
+            <aside class="quiz-sidebar">
+                <div class="quiz-sidebar-status">Онлайн</div>
+                <img src="assets/img/manager.jpg" alt="Менеджер">
+                <p class="quiz-sidebar-name">Полуянов Андрей</p>
+                <p class="quiz-sidebar-text">Дайте ответы на вопросы и получите <strong>скидку + подробную смету</strong></p>
+                <div class="quiz-sidebar-bonuses">
+                    <p>В конце получите:</p>
+                    <div class="quiz-bonus-items">
+                        <div class="quiz-bonus-item">
+                            <div class="quiz-bonus-item-img"><img src="assets/img/calc-icon.png" alt=""></div>
+                            <span>Подробный расчет</span>
+                            <div class="quiz-bonus-item-icon"><img src="assets/img/calc-icon.png" alt=""></div>
+                        </div>
+                        <div class="quiz-bonus-item">
+                            <div class="quiz-bonus-item-img"><img src="assets/img/gift-icon.png" alt=""></div>
+                            <span>Подарок</span>
+                            <div class="quiz-bonus-item-icon"><img src="assets/img/calc-icon.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+<!-- ABOUT -->
+<section class="section-about" id="about">
+    <div class="container">
+        <div class="about-inner">
+            <div class="about-content">
+                <h2 class="section-title">Узнайте о нас больше</h2>
+                <h3 class="about-heading">Более 15 лет безупречной работы: услуги по бетонированию &laquo;под ключ&raquo;</h3>
+                <p class="about-stats">120+ <span>клиентов каждый год</span></p>
+                <div class="about-text">
+                    <p>Наша компания специализируется на бетонных и фундаментных работах &laquo;под ключ&raquo; в Луганске и по всей территории ЛНР. Мы возводим надежные фундаменты для:</p>
+                    <p><span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> жилых домов (включая двухэтажные, каркасные, из газобетона, кирпича и пеноблоков);<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> гаражей, бань, хозяйственных построек;<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> коммерческих объектов (магазинов, ТЦ, промышленных зданий, ангаров);<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> беседок, террас, навесов и других сооружений.</p>
+                    <p>Также выполняем заливку бетонных площадок, дорожек и отмосток, делаем монолитные конструкции любой сложности.</p>
+                    <p><strong>Почему стоит выбрать именно нас?</strong></p>
+                    <p><span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Строгое соблюдение технологий и СНиП &mdash; подбираем тип фундамента с учетом грунта.<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Качественные материалы &ndash; используем профессиональное оборудование, армирование по проекту и надежный бетон.<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Опытные бригады &ndash; стаж работы специалистов составляет более 10 лет.<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Гарантия результата &ndash; соблюдаем сроки, обеспечиваем прочность конструкций, сдаем объекты без переделок.</p>
+                    <p><strong>Наши преимущества:</strong></p>
+                    <p><span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Бесплатный выезд специалиста и точный расчет сметы.<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Официальный договор и гарантии.<br>
+                    <span class="diamond" style="color:#D4852E;font-size:16px;">&#9670;</span> Чистовая сдача объекта.</p>
+                    <p><strong>Доверьте строительство профессионалам &ndash; мы обеспечим надежность на десятилетия!</strong></p>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="assets/img/about-photo.jpg" alt="бетонирование Луганск">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SERVICES -->
+<section class="section-services" id="services">
+    <div class="container">
+        <div class="section-title-shadow" aria-hidden="true">Какие мы выполняем бетонные работы в Луганске (ЛНР)</div>
+        <h2 class="section-title">Какие мы выполняем бетонные работы в Луганске (ЛНР)</h2>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/monolithic-foundation.jpg" alt="МОНОЛИТНЫЙ ФУНДАМЕНТ">
+                <div class="service-card-content">
+                    <div class="service-card-header">МОНОЛИТНЫЙ ФУНДАМЕНТ<br><br>от 13 000 руб./м3</div>
+                    <div class="service-card-checklist">
+                        <span>✅Разметка участка</span>
+                        <span>✅Земляные работы</span>
+                        <span>✅Песчаная подушка</span>
+                        <span>✅Щебеночная подушка</span>
+                        <span>✅Установка опалубки</span>
+                        <span>✅Арматурный каркас</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Уборка территории</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/strip-foundation.jpg" alt="ЛЕНТОЧНЫЙ ФУНДАМЕНТ">
+                <div class="service-card-content">
+                    <div class="service-card-header">ЛЕНТОЧНЫЙ ФУНДАМЕНТ<br><br>от 3 500 руб.м.п.</div>
+                    <div class="service-card-checklist">
+                        <span>✅Рытье траншей</span>
+                        <span>✅Устройство основания</span>
+                        <span>✅Устройство подошвы</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Гидроизоляция и утепление</span>
+                        <span>✅Организация перекрытия</span>
+                        <span>✅Уборка объекта</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/foundation-reinforcement.jpg" alt="УКРЕПЛЕНИЕ ФУНДАМЕНТА">
+                <div class="service-card-content">
+                    <div class="service-card-header">УКРЕПЛЕНИЕ ФУНДАМЕНТА<br><br>от 4 500 руб./м пог.</div>
+                    <div class="service-card-checklist">
+                        <span>✅Обследование фундамента</span>
+                        <span>✅Определение деформаций</span>
+                        <span>✅Выбор технологии</span>
+                        <span>✅Заделка трещин</span>
+                        <span>✅Усиление подошвы</span>
+                        <span>✅Устройство ж/б обоймы</span>
+                        <span>✅Уборка участка</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/path-concreting.jpg" alt="БЕТОНИРОВАНИЕ ДОРОЖЕК">
+                <div class="service-card-content">
+                    <div class="service-card-header">БЕТОНИРОВАНИЕ ДОРОЖЕК<br><br>от 4 000 руб./м пог.</div>
+                    <div class="service-card-checklist">
+                        <span>✅Разметка территории</span>
+                        <span>✅Земляные работы</span>
+                        <span>✅Песчаная подушка</span>
+                        <span>✅Щебеночная подушка</span>
+                        <span>✅Установка опалубки</span>
+                        <span>✅Армирование дорожки</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Затирка поверхности</span>
+                        <span>✅Вывоз мусора</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/yard-concreting.jpg" alt="БЕТОНИРОВАНИЕ ДВОРОВ">
+                <div class="service-card-content">
+                    <div class="service-card-header">БЕТОНИРОВАНИЕ ДВОРОВ<br><br>от 3 000 руб./м2</div>
+                    <div class="service-card-checklist">
+                        <span>✅Разметка двора</span>
+                        <span>✅Удаление грунта</span>
+                        <span>✅Подготовка подушки</span>
+                        <span>✅Монтаж опалубки</span>
+                        <span>✅Армирование участка</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Уклон для стока воды</span>
+                        <span>✅Уборка мусора</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/car-platform.jpg" alt="ПЛОЩАДКИ ПОД АВТО">
+                <div class="service-card-content">
+                    <div class="service-card-header">ПЛОЩАДКИ ПОД АВТО<br><br>от 5 000 руб./м2</div>
+                    <div class="service-card-checklist">
+                        <span>✅Разметка территории</span>
+                        <span>✅Земляные работы</span>
+                        <span>✅Подготовка основания</span>
+                        <span>✅Монтаж опалубки</span>
+                        <span>✅Армирование площадки</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Создание уклона</span>
+                        <span>✅Очистка участка</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/monolithic-walls.jpg" alt="МОНОЛИТНЫЕ СТЕНЫ">
+                <div class="service-card-content">
+                    <div class="service-card-header">МОНОЛИТНЫЕ СТЕНЫ<br><br>от 15 000 руб./м3</div>
+                    <div class="service-card-checklist">
+                        <span>✅Устройство основания</span>
+                        <span>✅Установка опалубки</span>
+                        <span>✅Грунтовка и армирование</span>
+                        <span>✅Приготовление смеси</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Уплотнение раствора</span>
+                        <span>✅Удаление опалубки</span>
+                        <span>✅Проверка геометрии</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-card-img" src="assets/img/services/concrete-blindarea.jpg" alt="БЕТОННЫЕ ОТМОСТКИ">
+                <div class="service-card-content">
+                    <div class="service-card-header">БЕТОННЫЕ ОТМОСТКИ<br><br>от 3 500 руб/м.пог.</div>
+                    <div class="service-card-checklist">
+                        <span>✅Подготовка участка</span>
+                        <span>✅Снятие грунта</span>
+                        <span>✅Устройство подушки</span>
+                        <span>✅Монтаж опалубки</span>
+                        <span>✅Армирование зоны</span>
+                        <span>✅Заливка бетона</span>
+                        <span>✅Формирование уклона</span>
+                        <span>✅Очистка участка</span>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service" data-modal="modal-service">Оставить заявку</button>
+                        <a href="#" class="btn-service-price">Скачать прайс</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- GUARANTEES -->
+<section class="section-guarantees" id="guarantees">
+    <div class="container">
+        <h2 class="section-title">Какие <b>гарантии</b> получают<br>наши клиенты</h2>
+        <div class="guarantees-grid">
+            <div class="guarantee-item">
+                <img src="assets/images/galochka.png" alt="" width="27" height="27" style="flex-shrink:0;">
+                <p><b>Соблюдение сроков</b><br>работаем четко по графику</p>
+            </div>
+            <div class="guarantee-item">
+                <img src="assets/images/galochka.png" alt="" width="27" height="27" style="flex-shrink:0;">
+                <p><b>Качественные материалы</b><br>используем проверенные смеси и арматуру</p>
+            </div>
+            <div class="guarantee-item">
+                <img src="assets/images/galochka.png" alt="" width="27" height="27" style="flex-shrink:0;">
+                <p><b>Поэтапный контроль</b><br>каждый шаг под строгим надзором эксперта</p>
+            </div>
+            <div class="guarantee-item">
+                <img src="assets/images/galochka.png" alt="" width="27" height="27" style="flex-shrink:0;">
+                <p><b>Честная и прозрачная смета</b><br>никаких скрытых платежей и переплат</p>
+            </div>
+            <div class="guarantee-item">
+                <img src="assets/images/galochka.png" alt="" width="27" height="27" style="flex-shrink:0;">
+                <p><b>Прочность конструкций</b><br>надежные фундаменты на десятилетия</p>
+            </div>
+            <div class="guarantee-item">
+                <img src="assets/images/galochka.png" alt="" width="27" height="27" style="flex-shrink:0;">
+                <p><b>Устойчивость к влаге и морозу</b><br>защита от деформаций и трещин</p>
+            </div>
+        </div>
+        <p class="guarantees-note">Все финансовые условия, сроки выполнения работ и гарантийные обязательства фиксируются в договоре</p>
+        <div class="guarantees-image">
+            <img src="assets/images/dogovor.png" alt="договор на бетонные работы">
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section-portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="section-title"><b>Наши работы</b> в Луганске и ЛНР</h2>
+        <span class="portfolio-tab">Бетонные работы</span>
+        <div class="portfolio-grid">
+            <img src="assets/img/portfolio/stupeni-iz-betona.jpg" alt="Ступени из бетона">
+            <img src="assets/img/portfolio/betonnye-kolony.jpg" alt="Бетонные колонны">
+            <img src="assets/img/portfolio/kolony-iz-betona.jpg" alt="Колонны из бетона">
+            <img src="assets/img/portfolio/zalivka-betonnyh-polov.jpg" alt="Заливка бетонных полов">
+            <img src="assets/img/portfolio/betonirovanie-dorozhki.jpg" alt="Бетонирование дорожки">
+            <img src="assets/img/portfolio/zalivka-fundamenta.jpg" alt="Заливка фундамента">
+            <img src="assets/img/portfolio/zalivka-betonnoj-dorozhki.jpg" alt="Заливка бетонной дорожки">
+            <img src="assets/img/portfolio/fundament.jpg" alt="Фундамент">
+            <img src="assets/img/portfolio/zalivka-betonnogo-pola.jpg" alt="Заливка бетонного пола">
+            <img src="assets/img/portfolio/zalivka-lestniczy.jpg" alt="Заливка лестницы">
+            <img src="assets/img/portfolio/betonnyj-fundament.jpg" alt="Бетонный фундамент">
+        </div>
+    </div>
+</section>
+<!-- TEAM / MATERIALS -->
+<section class="section-team" id="team">
+    <div class="container">
+        <div class="team-layout">
+            <div class="team-heading-col">
+                <h2 class="section-title">Используем только проверенные сертифицированные материалы.</h2>
+                <h3 class="section-subtitle-accent">Это залог прочности и долговечности вашего объекта!</h3>
+            </div>
+            <div class="team-cards">
+                <div class="team-card">
+                    <span class="team-card-number">01</span>
+                    <img src="assets/img/team/engineer.jpg" alt="инженер">
+                    <div class="team-card-overlay">
+                        <p class="team-item-title">Проектирование всех объектов выполняют квалифицированные инженеры</p>
+                        <p class="team-item-desc">с высшим строительным образованием и профессиональной подготовкой.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <span class="team-card-number">02</span>
+                    <img src="assets/img/team/foreman.jpg" alt="прораб">
+                    <div class="team-card-overlay">
+                        <p class="team-item-title">За вашим проектом закреплен опытный прораб,</p>
+                        <p class="team-item-desc">который руководит рабочими и лично контролирует соблюдение технологий.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <span class="team-card-number">03</span>
+                    <img src="assets/img/team/certificates.jpg" alt="сертификаты">
+                    <div class="team-card-overlay">
+                        <p class="team-item-title">Мы работаем исключительно</p>
+                        <p class="team-item-desc">с сертифицированными материалами и профессиональным оборудованием.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <span class="team-card-number">04</span>
+                    <img src="assets/img/team/masters.jpg" alt="мастера">
+                    <div class="team-card-overlay">
+                        <p class="team-item-title">В нашем штате только опытные мастера,</p>
+                        <p class="team-item-desc">которые систематически повышают свою квалификацию и обмениваются опытом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ -->
+<section class="section-faq" id="faq">
+    <div class="container">
+        <h2 class="section-title"><b>Вопросы клиентов</b><br>по бетонным работам в Луганске</h2>
+        <div class="faq-list">
+            <div class="faq-item"><div class="faq-question">Какая стоимость заливки бетона «под ключ» в Луганске?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Мы не называем одну цифру для всех, потому что стоимость зависит от объема, сложности работ, типа грунта и выбранных материалов. Для точного расчета мы бесплатно выезжаем на объект, проводим замеры и составляем детальную смету.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какую марку бетона выбрать для фундамента жилого дома?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Оптимальными марками бетона для заливки фундамента являются М300 и М350. Данные составы обладают высокой прочностью, морозостойкостью и водонепроницаемостью.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какой тип фундамента надежнее — ленточный или плитный?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Плитный фундамент станет оптимальным решением для участков с пучинистыми или переувлажненными грунтами. Ленточный — для стандартных условий с плотным грунтом. Мы поможем выбрать оптимальный вариант после обследования участка.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какой должна быть толщина бетонного слоя для стоянки авто?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Рекомендуемая толщина бетонного покрытия зависит от типа транспорта: для легковых автомобилей достаточно 10-15 см, для грузовых — от 20 см с усиленным армированием.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Бесплатно ли проводится выезд на объект и замер?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Да, выезд нашего специалиста на объект в Луганске осуществляется бесплатно. В ходе визита мы проводим замеры, оцениваем условия и составляем предварительную смету.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какое количество специалистов входит в бригаду?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>От 3 до 6 опытных специалистов в каждой бригаде! Наши мастера — профессионалы с 5-летним стажем в монолитном строительстве.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Входит ли в перечень ваших услуг монтаж отмостки по периметру дома?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Конечно! Заливаем отмостку с правильным уклоном и надежной гидроизоляцией. Ширину, форму и материалы подберем под ваши условия.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Оказываете ли услуги во всех районах города?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Мы работаем во всех районах Луганска: Артемовском, Ленинском, Каменнобродском, Жовтневом. При необходимости выезжаем в ЛНР.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какие этапы работ включает «фундамент под ключ»?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Стандартный комплекс работ: разметка участка и земляные работы, устройство уплотненной подушки, монтаж опалубки, армирование, заливка бетона с виброуплотнением, уход за бетоном.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Предоставляете ли гарантию на изготовленные вами бетонные конструкции?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Мы предоставляем официальную гарантию на все виды бетонных и монолитных работ. Гарантийный срок составляет до 5 лет в зависимости от типа конструкции.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Выполняете ли укладку бетонных садовых дорожек?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Выполняем работы по устройству бетонных покрытий любой сложности: садовые дорожки, площадки, отмостки, подъезды.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какие марки и классы бетона применяются в вашей работе?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Используем марки бетона от М200 до М350 — подбираем под конкретные задачи. Добавляем специальные присадки для морозостойкости и влагозащиты.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Можно ли заказать подготовку площадки под хозпостройку?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Изготавливаем бетонные основания любой конфигурации и площади — от компактных площадок до масштабных промышленных объектов.</p></div></div>
+            <div class="faq-item"><div class="faq-question">Какие меры вы принимаете, чтобы избежать растрескивания бетона?<div class="faq-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.105 12.512L8.104 8.101L12.514 8.103C13.119 8.103 13.614 7.608 13.615 7.003C13.615 6.390 13.124 5.900 12.511 5.900L8.105 5.902L8.103 1.491C8.099 0.883 7.612 0.388 7.000 0.388C6.391 0.392 5.900 0.884 5.900 1.488L5.901 5.899L1.491 5.897C0.882 5.894 0.387 6.389 0.390 6.998C0.390 7.304 0.516 7.579 0.712 7.775C0.908 7.971 1.187 8.101 1.490 8.097L5.900 8.106L5.902 12.517C5.902 12.823 6.024 13.094 6.224 13.295C6.424 13.495 6.699 13.620 7.001 13.616C7.610 13.612 8.105 13.117 8.105 12.512Z" fill="white"/></svg></div></div><div class="faq-answer"><p>Для долговечности бетона мы армируем основание сеткой, создаем деформационные швы, строго контролируем водоцементное соотношение и обеспечиваем правильный уход за бетоном после заливки.</p></div></div>
+        </div>
+        <div class="faq-whatsapp">
+            <a href="https://t.me/+79592591159" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="12" fill="#0088cc"/><path d="M16.5 7.5l-1.8 8.5c-.1.6-.4.7-1 .5l-2.6-1.9-1.3 1.2c-.1.1-.2.2-.5.2l.2-2.5 4.8-4.3c.2-.2-.1-.3-.3-.1l-5.9 3.7-2.5-.8c-.5-.2-.6-.5.1-.8l9.8-3.8c.4-.1.9.1.7.7z" fill="#fff"/></svg>
+                Ждем ваши вопросы в Telegram
+            </a>
+        </div>
+    </div>
+</section>
+<!-- CONSULTATION -->
+<section class="section-consultation" id="consultation">
+    <div class="container">
+        <div class="consultation-box">
+            <div class="consultation-inner">
+                <div class="consultation-info">
+                    <p class="consultation-label">Перед заказом работ <strong>получите консультацию специалиста!</strong></p>
+                    <p class="consultation-schedule">Звоните Пн-Сб с <strong>8.00 до 18.00</strong></p>
+                    <a href="tel:+79592591159" class="consultation-phone"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.0137 15.6172C20.1387 14.7096 19.0013 14.7096 18.09 15.6172C17.4046 16.2997 16.7266 16.9749 16.0412 17.6574C15.8516 17.8462 15.6985 17.8825 15.4725 17.7735C15.0569 17.5122 14.5611 17.3234 14.1455 17.0548C12.1697 15.806 10.5 14.2159 9.01997 12.4081C8.29816 11.5005 7.65656 10.5567 7.19723 9.46035C7.12432 9.23527 7.12432 9.11911 7.31388 8.93034C8.03569 8.28416 8.6773 7.60894 9.36265 6.92646C10.3105 5.9826 10.3105 4.88627 9.36265 3.94242C8.79395 3.3761 8.26171 2.84609 7.72947 2.31608C7.16077 1.74976 6.62853 1.18345 6.05983 0.653439C5.18491 -0.217813 4.04752 -0.217813 3.13614 0.653439C2.45079 1.33592 1.77273 2.01114 1.08738 2.69362C0.438477 3.3398 0.103092 4.09489 0.0228907 4.95888C-0.0937651 6.36014 0.248911 7.71784 0.744699 9.03924C1.77273 11.7982 3.32571 14.1796 5.18491 16.4086C7.72947 19.4362 10.7625 21.8176 14.2987 23.5166C15.8954 24.2716 17.5286 24.8743 19.2711 24.9904C20.5252 25.063 21.5896 24.729 22.4573 23.7779C23.026 23.0954 23.7113 22.5291 24.3165 21.8902C25.2278 20.9464 25.2278 19.8137 24.3165 18.9062C23.2155 17.8098 22.1146 16.7135 21.0137 15.6172Z" fill="white"/></svg><span>+7 (959) 259-11-59</span></a>
+                    <div class="consultation-messengers">
+                        <span class="consultation-msg-label">Пишите нам в мессенджер</span>
+                        <a href="https://t.me/+79592591159" target="_blank" rel="noopener" style="background:#0088cc;">
+                            <svg width="22" height="22" viewBox="0 0 40 40" aria-label="Telegram"><path d="M28.5 12.5l-3.2 15.1c-.2 1-.8 1.3-1.7.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.5 8.3-7.5c.4-.3-.1-.5-.5-.2l-10.3 6.5-4.4-1.4c-1-.3-1-.9.2-1.4l17.2-6.6c.8-.3 1.5.2 1.2 1.4z" fill="white"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="consultation-form-col">
+                    <p class="consultation-form-title">Оставьте свой номер и мастер вам перезвонит</p>
+                    <ul class="form-list">
+                        <li>обсудим объемы работ;</li>
+                        <li>определимся с технологией заливки;</li>
+                        <li>подберем оптимальные материалы;</li>
+                        <li>обсудим цену и условия оплаты;</li>
+                        <li>предложим скидки и бонусы</li>
+                    </ul>
+                    <form data-form-name="Консультация мастера">
+                        <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+                        <button type="submit" class="btn-submit">Консультация мастера</button>
+                        <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+                    </form>
+                </div>
+            </div>
+            <div class="consultation-manager">
+                <div class="consultation-manager-info">
+                    <p class="consultation-manager-name">Александр</p>
+                    <p class="consultation-manager-role">Старший мастер</p>
+                </div>
+                <img src="assets/images/122.png" alt="Александр">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- PRICE TABLE -->
+<section class="section-price-table" id="price">
+    <div class="container">
+        <h2 class="section-title">Стоимость бетонных работ в Луганске</h2>
+        <p class="price-disclaimer">Внимание: цены ориентировочные, могут меняться в зависимости от условий работ. Это не публичная оферта.</p>
+        <div class="price-table-wrap">
+            <table class="price-table">
+                <thead><tr><th>Наименование работ</th><th>Ед. изм.</th><th>Стоимость</th></tr></thead>
+                <tbody>
+                    <tr><td>Армирование монолитного пояса</td><td>м п.</td><td>от 250 ₽</td></tr>
+                    <tr><td>Заливка винтовой лестницы</td><td>1 ступень</td><td>от 2 200 ₽</td></tr>
+                    <tr><td>Выемка грунта рабочими</td><td>м³</td><td>от 850 ₽</td></tr>
+                    <tr><td>Выемка грунта экскаватором</td><td>м³</td><td>от 300 ₽</td></tr>
+                    <tr><td>Г-образные лестницы</td><td>1 ступень</td><td>от 1 290 ₽</td></tr>
+                    <tr><td>Подравнивание после техники</td><td>м²</td><td>от 420 ₽</td></tr>
+                    <tr><td>Бетонирование монолитного пояса (бетононасос)</td><td>м п.</td><td>от 200 ₽</td></tr>
+                    <tr><td>Заливка монолитного пояса вручную</td><td>м п.</td><td>от 330 ₽</td></tr>
+                    <tr><td>Усиленная бетонная отмостка</td><td>м²</td><td>от 600 ₽</td></tr>
+                    <tr><td>Квадратные бетонные колонны</td><td>м³</td><td>от 2 500 ₽</td></tr>
+                    <tr><td>Стандартная бетонная отмостка</td><td>м²</td><td>от 450 ₽</td></tr>
+                    <tr><td>Рытье траншей техникой</td><td>м п.</td><td>от 250 ₽</td></tr>
+                    <tr><td>Круглые бетонные колонны</td><td>м³</td><td>от 3 220 ₽</td></tr>
+                    <tr><td>Ленточный фундамент</td><td>м п.</td><td>от 1 320 ₽</td></tr>
+                    <tr><td>Монолитные перекрытия</td><td>м²</td><td>от 2 200 ₽</td></tr>
+                    <tr><td>Установка блоков ФБС</td><td>шт.</td><td>от 280 ₽</td></tr>
+                    <tr><td>Отмостка из тротуарной плитки</td><td>м²</td><td>от 600 ₽</td></tr>
+                    <tr><td>Монтаж с несъемной опалубкой</td><td>м²</td><td>от 2 200 ₽</td></tr>
+                    <tr><td>Обратная засыпка техникой</td><td>час</td><td>от 1 370 ₽</td></tr>
+                    <tr><td>Обратная засыпка вручную + уплотнение</td><td>м³</td><td>от 730 ₽</td></tr>
+                    <tr><td>Грунтование праймером</td><td>м²</td><td>от 50 ₽</td></tr>
+                    <tr><td>Одномаршевые лестницы</td><td>1 ступень</td><td>от 1 300 ₽</td></tr>
+                    <tr><td>П-образные лестницы</td><td>1 ступень</td><td>от 1 320 ₽</td></tr>
+                    <tr><td>Песчаная подушка с трамбовкой</td><td>м²</td><td>от 125 ₽</td></tr>
+                    <tr><td>ПГС-подсыпка до 10 см</td><td>м²</td><td>от 55 ₽</td></tr>
+                    <tr><td>ПГС-подсыпка свыше 10 см</td><td>м²</td><td>от 85 ₽</td></tr>
+                    <tr><td>Планировка вручную (естественный грунт)</td><td>м²</td><td>от 50 ₽</td></tr>
+                    <tr><td>Планировка вручную (насыпной грунт)</td><td>м²</td><td>от 95 ₽</td></tr>
+                    <tr><td>Полувинтовые лестницы</td><td>1 ступень</td><td>от 1 990 ₽</td></tr>
+                    <tr><td>Разметка территории застройки</td><td>м²</td><td>от 40 ₽</td></tr>
+                    <tr><td>Ростверковый фундамент</td><td>м п.</td><td>от 2 300 ₽</td></tr>
+                    <tr><td>Установка съемной опалубки</td><td>м²</td><td>от 1 750 ₽</td></tr>
+                    <tr><td>Трамбовка основания</td><td>м²</td><td>от 85 ₽</td></tr>
+                    <tr><td>Трехмаршевые лестницы</td><td>1 ступень</td><td>от 1 280 ₽</td></tr>
+                    <tr><td>Бетонная подготовка до 100 мм</td><td>м²</td><td>от 190 ₽</td></tr>
+                    <tr><td>Установка ж/б перемычек</td><td>м п.</td><td>от 500 ₽</td></tr>
+                    <tr><td>Монолитная плита с сеткой Ф4 мм</td><td>м²</td><td>от 1 000 ₽</td></tr>
+                    <tr><td>Обмазочная гидроизоляция</td><td>м²</td><td>от 70 ₽</td></tr>
+                    <tr><td>Оклеечная вертикальная изоляция (1 слой)</td><td>м²</td><td>от 95 ₽</td></tr>
+                    <tr><td>Оклеечная горизонтальная изоляция</td><td>м²</td><td>от 75 ₽</td></tr>
+                    <tr><td>Подготовка опалубки под монолитный пояс</td><td>м п.</td><td>от 250 ₽</td></tr>
+                    <tr><td>Монтаж ЖБИ плит</td><td>шт.</td><td>от 500 ₽</td></tr>
+                    <tr><td>Бетонная отмостка с утеплением</td><td>м²</td><td>от 730 ₽</td></tr>
+                    <tr><td>УШП (утепленная шведская плита)</td><td>м²</td><td>от 2 290 ₽</td></tr>
+                    <tr><td>Монолитный фундамент-плита</td><td>м²</td><td>от 1 900 ₽</td></tr>
+                    <tr><td>Цокольная плита с двухслойным армированием</td><td>м²</td><td>от 1 730 ₽</td></tr>
+                    <tr><td>Цокольная плита с однослойным армированием</td><td>м²</td><td>от 1 270 ₽</td></tr>
+                    <tr><td>Щебеночная подушка с трамбовкой</td><td>м²</td><td>от 245 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-price">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Скачайте прайс-лист на все услуги в 1 клик</h3>
+        <form data-form-name="Попап скачать прайс">
+            <label class="modal-select-label">Выберите куда вам удобнее отправить прайс?</label>
+            <select name="messenger"><option value="Telegram">Получить в Telegram</option><option value="Viber">Получить в Viber</option></select>
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Получить прайс сейчас</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modal-callback">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Перезвоните мне</h3>
+        <form data-form-name="Попап перезвоните мне">
+            <label>В какое время вам позвонить?</label>
+            <select name="callback_time"><option>Сейчас</option><option>В течение часа</option><option>В течение дня</option><option>На этой неделе</option></select>
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Заказать звонок</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modal-exit">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Стойте! Подождите!</h3>
+        <p class="modal-desc">Бесплатный расчет и смету работ</p>
+        <form data-form-name="Попап exit intent">
+            <p>Оставьте заявку и получите расчет в течении 60 минут!</p>
+            <label>Выберите куда вам выслать?</label>
+            <select name="messenger"><option value="Telegram">Получить в Telegram</option><option value="Viber">Получить в Viber</option></select>
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Получить смету бесплатно</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modal-promo">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Участвовать в акции</h3>
+        <p class="modal-desc">Только телефон и вы участник акции. Перезвоним через пару минут для уточнения деталей.</p>
+        <form data-form-name="Попап участвовать в акции">
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Участвовать в акции</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modal-service">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Оставьте заявку на услугу</h3>
+        <p class="modal-desc">Только телефон и мы в деле. Перезвоним как можно скорее</p>
+        <form data-form-name="Попап заявка на услугу">
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Оставить заявку</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modal-surveyor">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Вызвать замерщика бесплатно</h3>
+        <p class="modal-desc">Оставьте телефон и мы перезвоним</p>
+        <form data-form-name="Попап вызов замерщика">
+            <label>В какое время вам позвонить?</label>
+            <select name="callback_time"><option>Сейчас</option><option>В течение часа</option><option>В течение дня</option><option>На этой неделе</option></select>
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Заказать звонок</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modal-consultation">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h3 class="modal-title">Оставьте заявку на расчет стоимости</h3>
+        <form data-form-name="Оставьте заявку на расчет стоимости">
+            <label>Какая у вас кровля?</label>
+            <select name="roofing"><option>Металлочерепица</option><option>Профнастил</option><option>Черепица</option><option>Ондулин</option><option>Другая</option></select>
+            <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit" class="btn-submit">Оставить заявку</button>
+            <label class="form-privacy"><input type="checkbox"><span>Согласен с условиями <a href="#">политики конфиденциальности данных</a></span></label>
+        </form>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-inner container">
+        <div class="footer-col footer-logo-col">
+            <a href="#" class="footer-logo">
+                <svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="40" rx="6" fill="#A34100"/><text x="12" y="28" fill="#fff" font-family="Manrope,sans-serif" font-size="20" font-weight="800">БР</text><text x="48" y="22" fill="#fff" font-family="Inter,sans-serif" font-size="10">БЕТОННЫЕ</text><text x="48" y="34" fill="#fff" font-family="Inter,sans-serif" font-size="10">РАБОТЫ</text></svg>
+            </a>
+        </div>
+        <div class="footer-col footer-menu-col">
+            <h4>Меню</h4>
+            <ul class="footer-menu-list">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-advantages-col">
+            <h4>Преимущества</h4>
+            <ul class="footer-advantages-list">
+                <li>Выполняем работы любой сложности.</li>
+                <li>Проектируем каркас под нагрузки и тип грунта.</li>
+                <li>Каждый этап проверяется инженером.</li>
+                <li>Повышаем морозостойкость, влагозащиту, пластичность.</li>
+                <li>Гарантируем идеальную геометрию и гладкость поверхностей.</li>
+            </ul>
+        </div>
+        <div class="footer-col footer-info-col">
+            <h4>Информация</h4>
+            <p>Копирование и распространение материалов сайта без письменного согласия правообладателя запрещено.</p>
+            <p>Сайт содержит информацию общего характера, актуальные данные уточняйте у наших специалистов.</p>
+        </div>
+    </div>
+    <div class="footer-bottom container">
+        <span>Все права защищены</span>
+        <a href="privacy-policy.html" class="footer-bottom__link">Политика конфиденциальности</a>
+        <a href="privacy-policy.html" class="footer-bottom__link">Правовая информация</a>
+    </div>
+</footer>
+
+<!-- Cookie consent banner (visible by default for preview) -->
+<div class="cookie-banner" id="cookieBanner" role="alert" aria-live="polite">
+    <p>Для улучшения работы сайта мы используем файлы cookie. Вы всегда можете отключить файлы cookie в настройках вашего браузера.</p>
+    <button type="button" class="btn-cookie-accept" id="cookieAccept">Хорошо</button>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Header scroll effect - add .scrolled class when scrolled > 50px
+    const header = document.querySelector('.site-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    }
+
+    // 2. Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const headerHeight = document.querySelector('.site-header')?.offsetHeight || 90;
+                window.scrollTo({
+                    top: target.offsetTop - headerHeight,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // 3. Mobile menu toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+
+    // 4. Swiper.js init for portfolio slider
+    if (typeof Swiper !== 'undefined' && document.querySelector('.portfolio-slider')) {
+        new Swiper('.portfolio-slider', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1400: { slidesPerView: 4 },
+            },
+        });
+    }
+
+    // 5. Cookie consent
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAccept = document.getElementById('cookieAccept');
+    if (cookieBanner && cookieAccept) {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieBanner.classList.remove('hidden');
+        }
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieBanner.classList.add('hidden');
+        });
+    }
+
+    // 6. Lazy loading images (native + intersection observer fallback)
+    // (native used in HTML, this is just a safety net)
+
+    // 7. Portfolio Lightbox
+    (function initLightbox() {
+        const portfolioSection = document.querySelector('.section-portfolio');
+        if (!portfolioSection) return;
+
+        const images = portfolioSection.querySelectorAll('.portfolio-slide img, .portfolio-grid img');
+        if (!images.length) return;
+
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        overlay.innerHTML = '<button class="lightbox-close">&times;</button><button class="lightbox-prev">&#8249;</button><img class="lightbox-image" src="" alt=""><button class="lightbox-next">&#8250;</button><div class="lightbox-thumbs"></div>';
+        document.body.appendChild(overlay);
+
+        const lbImage = overlay.querySelector('.lightbox-image');
+        const lbThumbs = overlay.querySelector('.lightbox-thumbs');
+        let currentIndex = 0;
+        const srcs = [];
+
+        images.forEach((img, i) => {
+            const link = img.closest('a');
+            const fullSrc = link ? link.href : img.src;
+            srcs.push(fullSrc);
+
+            const thumb = document.createElement('img');
+            thumb.className = 'lightbox-thumb';
+            thumb.src = img.src;
+            thumb.alt = img.alt || '';
+            thumb.addEventListener('click', () => showImage(i));
+            lbThumbs.appendChild(thumb);
+
+            img.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (link) e.stopPropagation();
+                showImage(i);
+            });
+
+            if (link) {
+                link.addEventListener('click', (e) => e.preventDefault());
+            }
+        });
+
+        function showImage(index) {
+            currentIndex = index;
+            lbImage.src = srcs[index];
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            lbThumbs.querySelectorAll('.lightbox-thumb').forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+            });
+            const activeThumb = lbThumbs.querySelector('.lightbox-thumb.active');
+            if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        function closeLightbox() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        overlay.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        overlay.querySelector('.lightbox-prev').addEventListener('click', () => showImage((currentIndex - 1 + srcs.length) % srcs.length));
+        overlay.querySelector('.lightbox-next').addEventListener('click', () => showImage((currentIndex + 1) % srcs.length));
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+        document.addEventListener('keydown', (e) => {
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + srcs.length) % srcs.length);
+            if (e.key === 'ArrowRight') showImage((currentIndex + 1) % srcs.length);
+        });
+    })();
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const quizForm = document.querySelector('.quiz-form');
+    if (!quizForm) return;
+
+    const steps = quizForm.querySelectorAll('.quiz-step');
+    const progressBar = quizForm.querySelector('.quiz-progress-bar');
+    const totalSteps = steps.length;
+    let currentStep = 0;
+
+    function showStep(index) {
+        steps.forEach((step, i) => {
+            step.classList.toggle('active', i === index);
+        });
+        // Update progress bar (25%, 50%, 75%, 100%)
+        const progress = Math.round(((index + 1) / totalSteps) * 100);
+        if (progressBar) progressBar.style.width = progress + '%';
+        const pctEl = quizForm.querySelector('.quiz-progress-pct');
+        if (pctEl) pctEl.textContent = progress;
+        currentStep = index;
+    }
+
+    // Handle radio selection - enable Next button, add selected class
+    quizForm.querySelectorAll('.quiz-option').forEach(option => {
+        option.addEventListener('click', () => {
+            const radio = option.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                // Remove selected from siblings
+                const parent = option.closest('.quiz-options');
+                parent.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+                // Enable Next button
+                const nextBtn = option.closest('.quiz-step').querySelector('.quiz-btn-next');
+                if (nextBtn) nextBtn.disabled = false;
+                // Hide hint
+                const hint = option.closest('.quiz-step').querySelector('.quiz-hint');
+                if (hint) hint.style.display = 'none';
+            }
+        });
+    });
+
+    // Next button
+    quizForm.querySelectorAll('.quiz-btn-next').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep < totalSteps - 1) {
+                showStep(currentStep + 1);
+            }
+        });
+    });
+
+    // Back button
+    quizForm.querySelectorAll('.quiz-btn-back').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep > 0) {
+                showStep(currentStep - 1);
+            }
+        });
+    });
+
+    // Messenger selection toggles email/phone visibility
+    quizForm.querySelectorAll('input[name="quiz_messenger"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            const phoneInput = quizForm.querySelector('.quiz-contact-form input[name="phone"]');
+            const emailInput = quizForm.querySelector('.quiz-contact-form input[name="email"]');
+            if (radio.value === 'E-mail') {
+                if (emailInput) emailInput.style.display = 'block';
+                if (phoneInput) phoneInput.placeholder = 'Ваш номер телефона';
+            } else {
+                if (emailInput) emailInput.style.display = 'none';
+                if (phoneInput) phoneInput.placeholder = 'Ваш номер ' + radio.value;
+            }
+        });
+    });
+
+    // Update sidebar text based on current step
+    // (sidebar messages change per step on original site)
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all others
+            faqItems.forEach(other => other.classList.remove('active'));
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Open modal - any element with data-modal attribute
+    document.querySelectorAll('[data-modal]').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = trigger.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close modal - click close button
+    document.querySelectorAll('.modal-close').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const overlay = btn.closest('.modal-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close modal - click overlay background
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close modal - Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Exit intent - show modal when mouse leaves viewport from top
+    let exitIntentShown = false;
+    document.addEventListener('mouseout', (e) => {
+        if (!exitIntentShown && e.clientY <= 0 && !e.relatedTarget) {
+            const exitModal = document.getElementById('modal-exit');
+            if (exitModal && !document.querySelector('.modal-overlay.active')) {
+                exitModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                exitIntentShown = true;
+            }
+        }
+    });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle all forms with data-form-name attribute
+    document.querySelectorAll('form[data-form-name]').forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+
+            // Validate phone
+            const phoneInput = form.querySelector('input[name="phone"]');
+            if (phoneInput && phoneInput.value.replace(/\D/g, '').length < 7) {
+                phoneInput.style.borderColor = 'red';
+                phoneInput.focus();
+                return;
+            }
+
+            // Validate privacy checkbox
+            const privacyCheck = form.querySelector('.form-privacy input[type="checkbox"]');
+            if (privacyCheck && !privacyCheck.checked) {
+                const privacyLabel = privacyCheck.closest('.form-privacy');
+                privacyLabel.style.color = 'red';
+                privacyLabel.classList.remove('shake');
+                void privacyLabel.offsetWidth;
+                privacyLabel.classList.add('shake');
+                return;
+            }
+
+            // Show loading
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Отправка...';
+            }
+
+            // Collect form data
+            const formData = new FormData();
+            formData.append('action', 'betonnye_submit_form');
+            formData.append('nonce', (typeof betonnye_ajax !== 'undefined') ? betonnye_ajax.nonce : '');
+            formData.append('form_name', form.getAttribute('data-form-name'));
+            formData.append('phone', phoneInput ? phoneInput.value : '');
+
+            // Collect select values
+            const select = form.querySelector('select');
+            if (select) {
+                formData.append('messenger', select.value);
+            }
+
+            // Collect email if visible
+            const emailInput = form.querySelector('input[name="email"]');
+            if (emailInput && emailInput.style.display !== 'none') {
+                formData.append('email', emailInput.value);
+            }
+
+            // Collect quiz answers if present
+            const quizForm = form.closest('.quiz-form');
+            if (quizForm) {
+                quizForm.querySelectorAll('input[type="radio"]:checked').forEach(radio => {
+                    formData.append(radio.name, radio.value);
+                });
+            }
+
+            // AJAX URL
+            const ajaxUrl = (typeof betonnye_ajax !== 'undefined') ? betonnye_ajax.url : '/wp-admin/admin-ajax.php';
+
+            fetch(ajaxUrl, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    form.innerHTML = '<div class="form-success"><p>Спасибо! Мы свяжемся с вами в ближайшее время.</p></div>';
+
+                    // Close modal after 2 seconds
+                    const modal = form.closest('.modal-overlay');
+                    if (modal) {
+                        setTimeout(() => {
+                            modal.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }, 2000);
+                    }
+                } else {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
+                    // Show inline error
+                    let errorEl = form.querySelector('.form-error');
+                    if (!errorEl) {
+                        errorEl = document.createElement('p');
+                        errorEl.className = 'form-error';
+                        errorEl.style.color = 'red';
+                        errorEl.style.fontSize = '14px';
+                        errorEl.style.marginTop = '10px';
+                        form.appendChild(errorEl);
+                    }
+                    errorEl.textContent = data.data || 'Произошла ошибка. Попробуйте снова.';
+                }
+            })
+            .catch(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            });
+        });
+    });
+
+    // Reset phone border on input
+    document.querySelectorAll('input[name="phone"]').forEach(input => {
+        input.addEventListener('input', () => {
+            input.style.borderColor = '';
+        });
+    });
+});
+</script>
+<script>
+// Override cookie banner: show it by default for preview (remove localStorage check)
+(function(){
+    var cb = document.getElementById('cookieBanner');
+    if(cb) { cb.style.display = ''; cb.classList.remove('hidden'); }
+})();
+</script>
+</body>
+</html>

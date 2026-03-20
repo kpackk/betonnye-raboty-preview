@@ -14,10 +14,10 @@ add_action( 'wp_enqueue_scripts', 'betonnye_enqueue_styles' );
 function betonnye_enqueue_styles() {
 	// Parent theme style.
 	wp_enqueue_style(
-		'flavor-style',
+		'kadence-style',
 		get_template_directory_uri() . '/style.css',
 		[],
-		wp_get_theme( 'flavor' )->get( 'Version' )
+		wp_get_theme( 'kadence' )->get( 'Version' )
 	);
 
 	// Google Fonts: Manrope + Inter.
@@ -40,7 +40,7 @@ function betonnye_enqueue_styles() {
 	wp_enqueue_style(
 		'betonnye-main',
 		get_stylesheet_directory_uri() . '/assets/css/main.css',
-		[ 'flavor-style', 'betonnye-fonts' ],
+		[ 'kadence-style', 'betonnye-fonts' ],
 		'1.0.0'
 	);
 
@@ -153,4 +153,63 @@ function betonnye_register_menus() {
 	register_nav_menus( [
 		'footer-menu' => esc_html__( 'Footer Menu', 'betonnye-raboty' ),
 	] );
+}
+
+/**
+ * SEO meta tags, webmaster verification codes, and analytics.
+ *
+ * Replace placeholder values with actual codes from the client.
+ */
+add_action( 'wp_head', 'betonnye_seo_and_analytics', 1 );
+function betonnye_seo_and_analytics() {
+	// Basic SEO meta tags.
+	if ( is_front_page() ) {
+		echo '<meta name="description" content="Бетонные и монолитные работы в Луганске и ЛНР. Фундаменты, стяжки, отмостки, армопояса. Профессиональная бригада с гарантией качества.">' . "\n";
+		echo '<meta name="keywords" content="бетонные работы Луганск, монолитные работы, фундамент, стяжка пола, отмостка, армопояс, бетон ЛНР">' . "\n";
+	}
+
+	// Yandex Webmaster verification (replace YANDEX_VERIFICATION_CODE with actual code).
+	echo '<meta name="yandex-verification" content="YANDEX_VERIFICATION_CODE">' . "\n";
+
+	// Google Search Console verification (replace GOOGLE_VERIFICATION_CODE with actual code).
+	echo '<meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">' . "\n";
+}
+
+/**
+ * Yandex Metrika counter.
+ *
+ * Replace XXXXXXXX with the actual Metrika counter ID from the client.
+ */
+add_action( 'wp_head', 'betonnye_yandex_metrika', 99 );
+function betonnye_yandex_metrika() {
+	?>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		m[i].l=1*new Date();
+		for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}
+		k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+
+		ym(XXXXXXXX, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true
+		});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	<?php
+}
+
+/**
+ * Favicon (fallback if not set via WP Customizer).
+ */
+add_action( 'wp_head', 'betonnye_favicon', 2 );
+function betonnye_favicon() {
+	if ( ! has_site_icon() ) {
+		echo '<link rel="icon" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon.ico' ) . '" type="image/x-icon">' . "\n";
+		echo '<link rel="shortcut icon" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon.ico' ) . '" type="image/x-icon">' . "\n";
+	}
 }
