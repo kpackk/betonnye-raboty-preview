@@ -41,7 +41,7 @@ function betonnye_enqueue_styles() {
 		'betonnye-main',
 		get_stylesheet_directory_uri() . '/assets/css/main.css',
 		[ 'kadence-style', 'betonnye-fonts' ],
-		'1.0.0'
+		filemtime( get_stylesheet_directory() . '/assets/css/main.css' )
 	);
 
 	// Child theme style.css (overrides).
