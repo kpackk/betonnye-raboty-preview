@@ -1146,6 +1146,8 @@ p {
     min-height: 400px;
     cursor: pointer;
     padding: 32px 25.33px 22px;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card-img {
@@ -1193,7 +1195,7 @@ p {
 
 .service-card-checklist {
     padding: 10px 0;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: flex-end;
     flex-grow: 1;
@@ -1203,7 +1205,10 @@ p {
     line-height: 20px;
     letter-spacing: 0.04em;
     transition: 0.3s;
-    opacity: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+    overflow: visible !important;
 }
 
 .service-card-checklist span {
@@ -1396,10 +1401,13 @@ p {
 
 .portfolio-grid img {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: 240px !important;
+    min-height: 240px;
+    max-height: 240px;
+    object-fit: cover !important;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
 }
 
 .portfolio-grid img:hover {
@@ -1410,25 +1418,34 @@ p {
 .portfolio-more {
     text-align: center;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-load-more {
     background: transparent;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    padding: 14px 40px;
-    border-radius: 1600px;
-    font-size: 16px;
-    font-weight: 600;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
+    padding: 14px 40px !important;
+    border-radius: 1600px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
     cursor: pointer;
     transition: all var(--transition);
     font-family: var(--font-heading);
+    display: inline-block;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .btn-load-more:hover {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(163, 65, 0, 0.3);
 }
 
 /* --------------------------------------------------------------------------
@@ -3048,6 +3065,9 @@ p {
 
     .portfolio-grid img,
     .portfolio-slide img {
-        height: 220px;
+        height: 220px !important;
+        min-height: 220px;
+        max-height: 220px;
+        object-fit: cover !important;
     }
 }
