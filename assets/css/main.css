@@ -1143,7 +1143,7 @@ p {
     position: relative;
     border-radius: 7.68px;
     overflow: hidden;
-    min-height: 352.4px;
+    min-height: 400px;
     cursor: pointer;
     padding: 32px 25.33px 22px;
 }
@@ -1162,7 +1162,7 @@ p {
     position: absolute;
     inset: 0;
     background-color: #000;
-    opacity: 0.4;
+    opacity: 0.55;
     transition: 0.3s;
     z-index: 2;
 }
@@ -1200,14 +1200,15 @@ p {
     font-size: 13px;
     font-weight: 500;
     color: var(--color-white);
-    line-height: 1.25vw;
+    line-height: 20px;
     letter-spacing: 0.04em;
     transition: 0.3s;
-    opacity: 0;
+    opacity: 1;
 }
 
-.service-card:hover .service-card-checklist {
-    opacity: 1;
+.service-card-checklist span {
+    display: block;
+    padding: 1px 0;
 }
 
 .service-card-actions {
@@ -1390,6 +1391,7 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    width: 100%;
 }
 
 .portfolio-grid img {
@@ -1403,6 +1405,30 @@ p {
 .portfolio-grid img:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-load-more {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 14px 40px;
+    border-radius: 1600px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: var(--font-heading);
+}
+
+.btn-load-more:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
