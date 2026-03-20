@@ -61,17 +61,18 @@ $services = [
 
 <section class="section-services" id="services">
     <div class="container">
+        <div class="section-title-shadow" aria-hidden="true">Какие мы выполняем бетонные работы в Луганске (ЛНР)</div>
         <p class="section-label">Какие мы выполняем бетонные работы в Луганске (ЛНР)</p>
         <h2 class="section-title">Какие мы выполняем бетонные работы в Луганске (ЛНР)</h2>
         <div class="services-grid">
             <?php foreach ( $services as $service ) : ?>
             <div class="service-card">
                 <img class="service-card-img" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/services/<?php echo esc_attr( $service['image'] ); ?>" alt="<?php echo esc_attr( $service['title'] ); ?>" loading="lazy">
-                <div class="service-card-body">
-                    <h3 class="service-card-title"><?php echo esc_html( $service['title'] ); ?> <span class="service-card-price"><?php echo esc_html( $service['price'] ); ?></span></h3>
-                    <div class="service-card-desc">
+                <div class="service-card-content">
+                    <div class="service-card-header"><?php echo esc_html( $service['title'] ); ?><br><br><?php echo esc_html( $service['price'] ); ?></div>
+                    <div class="service-card-checklist">
                         <?php foreach ( $service['items'] as $item ) : ?>
-                            <span>&#x2705; <?php echo esc_html( $item ); ?></span>
+                            <span>✅ <?php echo esc_html( $item ); ?></span>
                         <?php endforeach; ?>
                     </div>
                     <div class="service-card-actions">

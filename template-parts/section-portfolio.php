@@ -9,54 +9,39 @@ $portfolio_query = new WP_Query([
 
 <section class="section-portfolio" id="portfolio">
     <div class="container">
-        <h2 class="section-title"><span>Наши работы</span> в Луганске и ЛНР</h2>
-        <p class="section-subtitle">Листайте влево/вправо</p>
+        <h2 class="section-title"><b>Наши работы</b> в Луганске и ЛНР</h2>
+        <span class="portfolio-tab">Бетонные работы</span>
 
         <?php if ($portfolio_query->have_posts()) : ?>
-        <div class="portfolio-slider swiper">
-            <div class="swiper-wrapper">
-                <?php while ($portfolio_query->have_posts()) : $portfolio_query->the_post(); ?>
-                <div class="swiper-slide portfolio-slide">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <a href="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>" target="_blank">
-                            <?php the_post_thumbnail('medium_large', ['loading' => 'lazy', 'alt' => get_the_title()]); ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
-                <?php endwhile; ?>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        <div class="portfolio-grid">
+            <?php while ($portfolio_query->have_posts()) : $portfolio_query->the_post(); ?>
+                <?php if (has_post_thumbnail()) : ?>
+                    <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'medium_large')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy">
+                <?php endif; ?>
+            <?php endwhile; ?>
         </div>
         <?php wp_reset_postdata(); ?>
 
         <?php else : ?>
         <!-- Fallback: static images when no CPT posts exist -->
-        <div class="portfolio-slider swiper">
-            <div class="swiper-wrapper">
-                <?php
-                $fallback_images = [
-                    'stupeni-iz-betona.jpg'          => 'Ступени из бетона',
-                    'betonnye-kolony.jpg'            => 'Бетонные колонны',
-                    'kolony-iz-betona.jpg'           => 'Колонны из бетона',
-                    'zalivka-betonnyh-polov.jpg'     => 'Заливка бетонных полов',
-                    'betonirovanie-dorozhki.jpg'     => 'Бетонирование дорожки',
-                    'zalivka-fundamenta.jpg'         => 'Заливка фундамента',
-                    'zalivka-betonnoj-dorozhki.jpg'  => 'Заливка бетонной дорожки',
-                    'fundament.jpg'                  => 'Фундамент',
-                    'zalivka-betonnogo-pola.jpg'     => 'Заливка бетонного пола',
-                    'zalivka-lestniczy.jpg'          => 'Заливка лестницы',
-                    'betonnyj-fundament.jpg'         => 'Бетонный фундамент',
-                ];
-                $theme_uri = esc_url(get_stylesheet_directory_uri());
-                foreach ($fallback_images as $file => $alt) : ?>
-                <div class="swiper-slide portfolio-slide">
-                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/img/portfolio/' . $file); ?>" alt="<?php echo esc_attr($alt); ?>" loading="lazy">
-                </div>
-                <?php endforeach; ?>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        <div class="portfolio-grid">
+            <?php
+            $fallback_images = [
+                'stupeni-iz-betona.jpg'          => 'Ступени из бетона',
+                'betonnye-kolony.jpg'            => 'Бетонные колонны',
+                'kolony-iz-betona.jpg'           => 'Колонны из бетона',
+                'zalivka-betonnyh-polov.jpg'     => 'Заливка бетонных полов',
+                'betonirovanie-dorozhki.jpg'     => 'Бетонирование дорожки',
+                'zalivka-fundamenta.jpg'         => 'Заливка фундамента',
+                'zalivka-betonnoj-dorozhki.jpg'  => 'Заливка бетонной дорожки',
+                'fundament.jpg'                  => 'Фундамент',
+                'zalivka-betonnogo-pola.jpg'     => 'Заливка бетонного пола',
+                'zalivka-lestniczy.jpg'          => 'Заливка лестницы',
+                'betonnyj-fundament.jpg'         => 'Бетонный фундамент',
+            ];
+            foreach ($fallback_images as $file => $alt) : ?>
+                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/img/portfolio/' . $file); ?>" alt="<?php echo esc_attr($alt); ?>" loading="lazy">
+            <?php endforeach; ?>
         </div>
         <?php endif; ?>
 
