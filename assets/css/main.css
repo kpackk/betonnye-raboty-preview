@@ -550,11 +550,12 @@ p {
 .quiz-inner {
     display: flex;
     gap: 0;
-    align-items: start;
+    align-items: stretch;
 }
 
 .quiz-form {
     flex: 1;
+    min-width: 0;
     background: rgb(251, 251, 251);
     border-radius: 7.68px;
     padding: 26.67px 60px 33.33px 60px;
@@ -647,7 +648,7 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex: 0 0 293px;
+    flex: 0 0 calc(50% - 14px);
     padding: 14.67px 13.33px;
     border: 0.5px solid #F7F7F7;
     background: #F7F7F7;
@@ -658,6 +659,7 @@ p {
     line-height: 1.15;
     color: var(--color-text);
     margin: 10px 0;
+    box-sizing: border-box;
 }
 
 .quiz-option:hover {
@@ -1484,6 +1486,7 @@ p {
     font-weight: 400;
     letter-spacing: 1.47px;
     margin-bottom: 15.36px;
+    line-height: 1.45;
 }
 
 .team-heading-col .section-subtitle-accent {
@@ -1693,24 +1696,28 @@ p {
     padding: 45px 62px 45px 85px;
     position: relative;
     overflow: hidden;
+    min-height: 467px;
 }
 
 .consultation-inner {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: 471px;
+    min-height: 380px;
+    position: relative;
+    z-index: 2;
 }
 
 .consultation-info {
-    flex: 0 1 auto;
-    width: 297px;
+    flex: 0 0 240px;
     font-family: var(--font-heading);
 }
 
 .consultation-form-col {
     flex: 0 0 267px;
     font-family: var(--font-heading);
+    position: relative;
+    z-index: 3;
 }
 
 .consultation-info {
@@ -1722,15 +1729,14 @@ p {
 
 .consultation-label {
     font-family: var(--font-heading);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
-    line-height: 53.3333px;
-    min-height: 267px;
+    line-height: 1.35;
     margin-top: 0;
-    margin-bottom: 56.6667px;
+    margin-bottom: 40px;
     color: var(--color-white);
-    letter-spacing: 1.6px;
-    padding-top: 67px;
+    letter-spacing: 1.2px;
+    padding-top: 0;
 }
 
 .consultation-label strong {
@@ -1779,7 +1785,7 @@ p {
     display: flex;
     align-items: center;
     gap: 0;
-    margin-top: 40px;
+    margin-top: 30px;
     height: 40px;
 }
 
@@ -1862,13 +1868,16 @@ p {
 .consultation-manager {
     position: absolute;
     bottom: 0;
-    left: 330px;
-    width: 404.664px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .consultation-manager-info {
     position: absolute;
-    top: 244px;
+    bottom: 140px;
     left: 20px;
     color: var(--color-white);
     z-index: 1;
@@ -1893,8 +1902,8 @@ p {
 }
 
 .consultation-manager img {
-    width: 404.664px;
-    height: 466.664px;
+    width: 100%;
+    height: auto;
     display: block;
     border-radius: 0;
     object-fit: cover;
@@ -2549,9 +2558,32 @@ p {
    22. RESPONSIVE — 992px
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
-    .about-inner,
-    .consultation-inner {
+    .about-inner {
         grid-template-columns: 1fr;
+    }
+
+    .consultation-inner {
+        flex-direction: column;
+        min-height: auto;
+        align-items: center;
+    }
+
+    .consultation-info {
+        flex: none;
+        width: 100%;
+    }
+
+    .consultation-form-col {
+        flex: none;
+        width: 100%;
+    }
+
+    .consultation-manager {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 300px;
+        margin: 20px auto 0;
     }
 
     .quiz-inner {
@@ -2901,11 +2933,12 @@ p {
 
     .consultation-inner {
         flex-direction: column;
-        height: auto;
+        min-height: auto;
         align-items: center;
     }
 
     .consultation-info {
+        flex: none;
         width: 100%;
         text-align: center;
         align-items: center;
@@ -2942,6 +2975,7 @@ p {
     .consultation-manager {
         position: relative;
         left: 0;
+        transform: none;
         width: 60vw;
         margin: 4vw auto 0;
     }
@@ -3005,6 +3039,16 @@ p {
         padding: 4.6875vw;
     }
 
+    .quiz-options {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .quiz-option {
+        flex: none;
+        width: 100%;
+    }
+
     .quiz-question {
         font-size: 4.625vw;
     }
@@ -3037,10 +3081,15 @@ p {
         padding: 0 15px 15px 20px;
     }
 
-    .team-item {
+    .team-card {
         flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        height: auto;
+    }
+
+    .team-card-overlay {
+        position: relative;
+        width: 100%;
+        bottom: 0;
     }
 
     .consultation-form {
